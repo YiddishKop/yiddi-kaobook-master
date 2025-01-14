@@ -3,7 +3,7 @@
 \chapter{平行四边形}
 %\labch{pingxing}
 
-\section{回忆：轴对称图形}
+\section{轴对称与中心对称}
 八上部分，我们已经学习了两大对称图形中的一种 --- 轴对称图形。简单说，轴对称图形就是沿着一条直线翻折后，
 直线两边的部分能够完全重合的图形，建立在全等、垂直平分线的基础上，我们
 可以很容易的发现轴对称图形的性质：\underline{\textbf{\textit{一轴二点垂直等距}}}：
@@ -131,15 +131,11 @@
 
 
 \clearpage
-\marginnote{
-    体会中点坐标公式对于坐标系内的轴对称和中心对称的重要作用！
-    \begin{itemize}
-        \item 已知对称中心（对称轴），求对应点；
-        \item 已知对应点，求对称中心（对称轴）。
-    \end{itemize}
-}
-“翻折” 产生 “轴对称”；“旋转” 产生 “中心对称”！不论轴对称还是中心对称，在数学和物理中都有着广泛的应用，
-比如下面四个函数图像。观察图像，识别抽对称或中心对称。
+\marginnote{TODO: 看图技巧}
+
+
+\example{“翻折” 产生 “轴对称”；“旋转” 产生 “中心对称”！不论轴对称还是中心对称，在数学和物理中都有着广泛的应用，
+比如下面四个函数图像。观察图像，识别抽对称或中心对称。}
 
 % 4 个函数图像
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -165,13 +161,18 @@
 \draw    (169.29,1322.02) .. controls (191.73,1326.51) and (198.46,1321.27) .. (200.71,1357.18) ;
 \end{tikzpicture}
 
+\vspace{2cm}
+
+
+\begin{example}
+    图中其中既是轴对称图形又是中心对称图形的是（ \ \ ）
+    \includegraphics{1-t-symetry.jpg}
+\end{example}
+
+\vspace{2cm}
 
 
 
-
-
-
-\clearpage
 \section{绘制轴对称和中心对称图形}
 
 \marginnote{
@@ -278,8 +279,9 @@
 
 
 
+\cleardoublepage
 \marginnote{
-    请进一步思考下面3个问题:
+    TODO: 需要重新整理，请进一步思考下面3个问题:
     \begin{itemize}
         \item 你绘制图形的过程中有没有注意到“中点”的出现，谁是中点，中点坐标公式是什么？
         \\\underline{\hspace{18em}} 
@@ -290,6 +292,14 @@
     \end{itemize}
     }
 
+\marginnote{
+    体会中点坐标公式对于坐标系内的轴对称和中心对称的重要作用！
+    \begin{itemize}
+        \item 已知对称中心（对称轴），求对应点；
+        \item 已知对应点，求对称中心（对称轴）。
+    \end{itemize}
+}
+
 \example{}以下坐标系中，我们已经预先设计好了两个点，请分别以 y 轴为对称轴，以 原点 为对称中心，画出
 对称点。并且在这个过程中体会: 
 \begin{enumerate}
@@ -297,8 +307,6 @@
     \item 平行的判定和性质的运用？
     \item 每个对应点是如何绘制出的?
 \end{enumerate}
-
-
 
 
 % 绘制对称图
@@ -310,35 +318,169 @@
 
 
 
-\clearpage
-\section{平行四边形的性质}
+\cleardoublepage
+\section{平行四边形的性质及重要推论---“22234”}
+
+\marginnote{为什么要研究平四的性质？ 为了判定和证明一个图形是平四！\\
+就像我们八上学过的“三线合一”以及“斜中定理”，他们原本是等腰三角形和直角三角形的\ubi{性质}，
+但我们可以\ubi{逆用性质}来\ubi{判定}一个三角形是否等腰三角形或者直角三角形.\\
+由“性质”到“判定”，是我们研究平行线、三角形、四边形、圆形四大图形的基本思路。\\}
 
 \marginnote{
-    % 1
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-        %uncomment if require: \path (0,1525); %set diagram left start at 0, and has height of 1525
-        %Shape: Parallelogram [id:dp7153541649435262] 
-        \draw   (130.45,1040.02) -- (230.1,1040.02) -- (261,1093.35) -- (161.36,1093.35) -- cycle ;
-        %Straight Lines [id:da7524518416005066] 
-        \draw    (130.46,1040.02) -- (261,1093.35) ;
-        %Straight Lines [id:da5240889720941362] 
-        \draw    (230.1,1040.02) -- (161.36,1093.35) ;
-        % Text Node
-        \draw (190,1070.35) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$O$};
-        % Text Node
-        \draw (234,1025.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
-        % Text Node
-        \draw (262,1082.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
-        % Text Node
-        \draw (139,1084.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
-        % Text Node
-        \draw (115,1028.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
-    \end{tikzpicture}
-}
+    \vspace{2cm}    
+平行四边形的性质最容易与\ubi{等腰梯形}混淆，我们通过下面两道题，来研究等腰梯形的性质！\\}
+
+\marginnote{在四边形ABCD中，AD//BC}
+
+\begin{marginfigure}
+    \includegraphics[width=0.6\textwidth]{1-cancel-theorem-1.jpg}
+\end{marginfigure}
+
+\marginnote{结论：一边平行+另一边相等 \cancel{=>} 平四 }
+
+\begin{marginfigure}
+    \includegraphics[width=0.6\textwidth]{1-cancel-theorem-2.jpg}
+\end{marginfigure}
+\marginnote{结论：一边平行+对角线相等 \cancel{=>} 平四}
+
+\begin{definition}
+    \textbf{平行四边形的定义}\\
+    \ubi{两组对边}分别平行的四边形。用“$ \pllg $”表示。例如: 平行四边形ABCD
+    表示为“$ \pllg $ABCD”, 读作“平行四边形ABCD”\\
+\end{definition}
 
 
 
+\ubi{“平行线间的平行线段相等”}。平行四边形从性质到判定的所有定理，都可以通过定义和平行线间线段性质来推导。
+
+\begin{theorem}
+    \textbf{平行四边形的性质---"222"}
+    \begin{itemize}
+        \item 性质1-对边：
+        \begin{itemize}
+            \item \ubi{1}组对边\ubi{平行且相等}
+            \item \ubi{2}组对边\ubi{平行}
+            \item \ubi{2}组对边\ubi{相等}
+        \end{itemize}
+        \item 性质2-对角：\ubi{2}组对角\ubi{相等}
+        \item 性质3-对角线：\ubi{2}条对角线\ubi{相互平分}
+        \item 性质4-临边：无此性质
+        \item 性质5-临角：无关性质
+    \end{itemize}
+\end{theorem}
+
+
+
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,2174); %set diagram left start at 0, and has height of 2174
+
+%Straight Lines [id:da9427678512745923] 
+\draw    (222.35,1488.9) -- (299.87,1488.9) ;
+%Straight Lines [id:da4822857450817737] 
+\draw    (222.81,1524) -- (300.33,1524) ;
+%Straight Lines [id:da8463815694032524] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (265.12,1475.08) -- (291.38,1536.09) ;
+%Straight Lines [id:da2574177817882073] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (235.78,1478.54) -- (258.18,1534.36) ;
+%Shape: Parallelogram [id:dp9156200916559927] 
+\draw   (94.37,1644.66) -- (143.12,1644.66) -- (156.28,1672.18) -- (107.53,1672.18) -- cycle ;
+%Straight Lines [id:da24285033646484977] 
+\draw    (94.37,1644.66) -- (156.28,1672.18) ;
+%Straight Lines [id:da9011910199069091] 
+\draw    (143.12,1644.66) -- (107.54,1672.18) ;
+
+
+% Text Node
+\draw (204.21,1478.05) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$l_{1}$};
+% Text Node
+\draw (204.21,1509.7) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$l_{2}$};
+% Text Node
+\draw (235.12,1468.69) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$A$};
+% Text Node
+\draw (267.63,1468.11) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$B$};
+% Text Node
+\draw (238.63,1526.21) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$C$};
+% Text Node
+\draw (271.43,1525.63) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$D$};
+% Text Node
+\draw    (155,1573.34) -- (214,1573.34) -- (214,1609.34) -- (155,1609.34) -- cycle  ;
+\draw (156,1574.34) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$ \begin{array}{l}
+AB//CD\\
+AC//BD
+\end{array}$};
+% Text Node
+\draw (312,1534.01) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$ \begin{array}{l}
+AB=CD\\
+AB//CD
+\end{array}$};
+% Text Node
+\draw (312,1599.01) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$ \begin{array}{l}
+AB=CD\\
+AC=BD
+\end{array}$};
+% Text Node
+\draw (24,1574.01) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$ \begin{array}{l}
+\angle B=\angle C\\
+\angle A=\angle D
+\end{array}$};
+% Text Node
+\draw (83.29,1633.88) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
+% Text Node
+\draw (142.73,1632.57) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
+% Text Node
+\draw (93.39,1666.56) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
+% Text Node
+\draw (154.1,1664.17) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
+% Text Node
+\draw (118.4,1656.55) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$O$};
+% Text Node
+\draw (94,1573.34) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {平行判定};
+% Text Node
+\draw (237,1585.34) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {平行线相截};
+% Text Node
+\draw (153,1700.01) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$ \begin{array}{l}
+AO=DO\\
+BO=CO
+\end{array}$};
+% Text Node
+\draw (196,1648.34) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {全等证平行};
+% Text Node
+\draw (234,1550.34) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {平行线相截};
+% Connection
+\draw    (214,1583.81) -- (309.06,1559.55) ;
+\draw [shift={(311,1559.05)}, rotate = 165.68] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+% Connection
+\draw    (214,1595.95) -- (309.02,1610.78) ;
+\draw [shift={(311,1611.09)}, rotate = 188.87] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+% Connection
+\draw    (83,1591.09) -- (153,1591.26) ;
+\draw [shift={(155,1591.27)}, rotate = 180.15] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+% Connection
+\draw    (184.93,1699.01) -- (184.58,1611.34) ;
+\draw [shift={(184.57,1609.34)}, rotate = 89.77] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw   (271.07, 1488.9) circle [x radius= 5, y radius= 5]   ;
+\draw   (286.18, 1524) circle [x radius= 5, y radius= 5]   ;
+\draw   (239.94, 1488.9) circle [x radius= 5, y radius= 5]   ;
+\draw   (254.02, 1524) circle [x radius= 5, y radius= 5]   ;
+
+\end{tikzpicture}
+
+
+
+
+
+
+
+
+
+
+
+\cleardoublepage
+%1-----7 图
 \marginnote{
     \vspace{2cm}
     % 2
@@ -361,78 +503,19 @@
         \draw (513,1028.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
     \end{tikzpicture}
 }
-\marginnote{    面积推论1：$ \triangle{ABD} \cong \triangle{BDC} $}
+\marginnote{    对角线推论1：$ \triangle{ABD} \cong \triangle{BDC} $}
 
 
-\marginnote{
-    % 3
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,1525); %set diagram left start at 0, and has height of 1525
-    %Shape: Parallelogram [id:dp16369600351526303] 
-    \draw   (419.45,1185.02) -- (519.1,1185.02) -- (550,1238.35) -- (450.36,1238.35) -- cycle ;
-    %Straight Lines [id:da4721446374336069] 
-    \draw    (419.46,1185.02) -- (550,1238.35) ;
-    %Straight Lines [id:da3691477848803062] 
-    \draw    (519.1,1185.02) -- (450.36,1238.35) ;
-    %Shape: Polygon [id:ds16036927891441088] 
-    \draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (519.1,1185.02) -- (484.73,1211.69) -- (419.45,1185.02) -- cycle ;
-    %Shape: Polygon [id:ds4250814698747363] 
-    \draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=0.43 ] (484.73,1211.69) -- (450.36,1238.35) -- (419.46,1185.02) -- cycle ;
-    %Shape: Polygon [id:ds5794159479011209] 
-    \draw  [fill={rgb, 255:red, 74; green, 74; blue, 74 }  ,fill opacity=1 ] (550,1238.35) -- (450.36,1238.35) -- (484.73,1211.69) -- cycle ;
-    %Shape: Polygon [id:ds20886823741109595] 
-    \draw  [fill={rgb, 255:red, 74; green, 74; blue, 74 }  ,fill opacity=0.71 ] (484.73,1211.69) -- (550,1238.35) -- (519.1,1185.02) -- cycle ;
-    % Text Node
-    \draw (404,1173.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
-    % Text Node
-    \draw (428,1229.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
-    % Text Node
-    \draw (551,1227.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
-    % Text Node
-    \draw (523,1170.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
-    % Text Node
-    \draw (479,1215.35) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$O$};
-    \end{tikzpicture}
-}
+\begin{marginfigure}
+    \includegraphics{1-area-4.jpg}
+\end{marginfigure}
 \marginnote{面积推论2：$ S_{\triangle{ABO}} = S_{\triangle{ADO}} = S_{\triangle{DOC}} = S_{\triangle{BOC}} $}
 
-\marginnote{
-    % 4
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,1525); %set diagram left start at 0, and has height of 1525
-    %Shape: Parallelogram [id:dp5019440356353633] 
-    \draw   (82.45,1194.02) -- (182.1,1194.02) -- (213,1247.35) -- (113.36,1247.35) -- cycle ;
-    %Straight Lines [id:da8858840820558036] 
-    \draw    (82.46,1194.02) -- (213,1247.35) ;
-    %Straight Lines [id:da41641784094877043] 
-    \draw    (182.1,1194.02) -- (113.36,1247.35) ;
-    %Straight Lines [id:da787493974804194] 
-    \draw    (138.57,1166.73) -- (156.57,1270.73) ;
-    %Shape: Polygon [id:ds3314887247384546] 
-    \draw  [fill={rgb, 255:red, 74; green, 74; blue, 74 }  ,fill opacity=1 ] (143.57,1193.73) -- (82.45,1194.02) -- (147.73,1220.69) -- cycle ;
-    %Shape: Polygon [id:ds4023416022442927] 
-    \draw  [fill={rgb, 255:red, 74; green, 74; blue, 74 }  ,fill opacity=0.45 ] (213,1247.35) -- (152.57,1247.73) -- (147.73,1220.69) -- cycle ;
-    % Text Node
-    %\draw (92,1274.45) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$\triangle AEO\ \cong \ \triangle CFO$};
-    % Text Node
-    \draw (158.57,1247.73) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$F$};
-    % Text Node
-    \draw (142,1177.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$E$};
-    % Text Node
-    \draw (142,1224.35) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$O$};
-    % Text Node
-    \draw (186,1179.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
-    % Text Node
-    \draw (214,1236.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
-    % Text Node
-    \draw (91,1238.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
-    % Text Node
-    \draw (67,1182.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
-    \end{tikzpicture}
-}
-\marginnote{    面积推论3：$ \triangle AEO\ \cong \ \triangle CFO $}
+
+\begin{marginfigure}
+    \includegraphics{1-area-2.jpg}
+\end{marginfigure}
+\marginnote{    过O直线推论3：$ \triangle AEO\ \cong \ \triangle CFO $}
 
 
 \begin{marginfigure}
@@ -440,231 +523,39 @@
 \end{marginfigure}
 \marginnote{面积推论4：$ S_1 \times S_3= S_2 \times S_4 $}
 
-\marginnote{
-    % 6        
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-        %uncomment if require: \path (0,1636); %set diagram left start at 0, and has height of 1636
-        %Shape: Polygon [id:ds14144180879449886] 
-        \draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (510.1,1347.02) -- (491.2,1401.81) -- (410.45,1347.02) -- cycle ;
-        %Shape: Parallelogram [id:dp10799027045053822] 
-        \draw   (410.45,1347.02) -- (510.1,1347.02) -- (541,1400.35) -- (441.36,1400.35) -- cycle ;
-        %Straight Lines [id:da4913472246120605] 
-        \draw    (510.1,1347.02) -- (491.2,1401.81) ;
-        % Text Node
-        \draw (395,1335.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
-        % Text Node
-        \draw (419,1391.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
-        % Text Node
-        \draw (542,1389.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
-        % Text Node
-        \draw (514,1332.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
-        % Text Node
-        \draw (469,1356.21) node [anchor=north west][inner sep=0.75pt]    {$S_{1}$};
-        % Text Node
-        \draw (438,1375.21) node [anchor=north west][inner sep=0.75pt]    {$S_{3}$};
-        % Text Node
-        \draw (507,1372.21) node [anchor=north west][inner sep=0.75pt]    {$S_{2}$};
-    \end{tikzpicture}
-}
-\marginnote{面积推论5：$ S_{1} =S_{2} +S_{3} =\frac{1}{2} S_{\pllg ABCD} $}
+\begin{marginfigure}
+    \includegraphics{1-area-3.jpg}
+\end{marginfigure}
+\marginnote{过O直线推论5：$ S_{1} =S_{2} +S_{3} =\frac{1}{2} S_{\pllg ABCD} $}
 
-% \marginnote{
-%     % 7
-%     \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-%     \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%         %uncomment if require: \path (0,1636); %set diagram left start at 0, and has height of 1636
-%         %Shape: Parallelogram [id:dp20801075320991913] 
-%         \draw   (422.45,1220.02) -- (522.1,1220.02) -- (553,1273.35) -- (453.36,1273.35) -- cycle ;
-%         %Straight Lines [id:da46437499063461196] 
-%         \draw    (453.36,1273.35) -- (476.33,1247.35) ;
-%         %Straight Lines [id:da8224623452600757] 
-%         \draw    (476.33,1247.35) -- (522.1,1220.02) ;
-%         %Straight Lines [id:da021792702699078292] 
-%         \draw    (476.33,1247.35) -- (553,1273.35) ;
-%         %Straight Lines [id:da9951013836676834] 
-%         \draw    (422.45,1220.02) -- (476.33,1247.35) ;
-%         %Shape: Polygon [id:ds6203832184667724] 
-%         \draw  [fill={rgb, 255:red, 248; green, 231; blue, 28 }  ,fill opacity=0.46 ] (476.33,1247.35) -- (522.1,1220.02) -- (422.45,1220.02) -- cycle ;
-%         %Shape: Polygon [id:ds41382059177067565] 
-%         \draw  [fill={rgb, 255:red, 248; green, 231; blue, 28 }  ,fill opacity=0.41 ] (553,1273.35) -- (453.36,1273.35) -- (476.33,1247.35) -- cycle ;
-%         % Text Node
-%         \draw (407,1208.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
-%         % Text Node
-%         \draw (431,1264.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
-%         % Text Node
-%         \draw (554,1262.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
-%         % Text Node
-%         \draw (526,1205.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
-%         % Text Node
-%         \draw (476.33,1247.35) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$P$};
-%         % Text Node
-%         \draw (446,1240.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$S_{1}$};
-%         % Text Node
-%         \draw (492,1253.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$S_{4}$};
-%         % Text Node
-%         \draw (467,1219.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$S_{3}$};
-%         % Text Node
-%         \draw (514,1236.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$S_{2}$};
-%         % Text Node
-%         %\draw (383,1281.35) node [anchor=north west][inner sep=0.75pt]    {};
-%     \end{tikzpicture}
-% }
 \begin{marginfigure}
     \includegraphics{1-s1s2duijiao.png}
 \end{marginfigure}
 \marginnote{    面积推论6：$S_{1} +S_{2} =S_{3} +S_{4} =\frac{1}{2} S_{\pllg ABCD}$}
 
 
-\begin{definition}
-    \textbf{平行四边形的定义}\\
-    两组对边分别平行的四边形。用“$ \pllg $”表示。例如: 平行四边形ABCD
-    表示为“$ \pllg $ABCD”, 读作“平行四边形ABCD”\\
-\end{definition}
 
-“平行线间的平行线段相等”。平行四边形从性质到判定的所有定理，都可以通过定义和平行线间线段性质来推导。
-
-
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,1954); %set diagram left start at 0, and has height of 1954
-
-%Straight Lines [id:da9427678512745923] 
-\draw    (172.33,1481.35) -- (276.71,1481.35) ;
-%Straight Lines [id:da4822857450817737] 
-\draw    (172.95,1526.25) -- (277.33,1526.25) ;
-%Straight Lines [id:da8463815694032524] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (229.92,1463.68) -- (265.27,1541.71) ;
-%Straight Lines [id:da2574177817882073] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (190.42,1468.1) -- (220.57,1539.5) ;
-%Shape: Parallelogram [id:dp9156200916559927] 
-\draw   (190.57,1649.19) -- (257.52,1649.19) -- (275.59,1684.59) -- (208.64,1684.59) -- cycle ;
-%Straight Lines [id:da24285033646484977] 
-\draw    (190.57,1649.19) -- (275.59,1684.59) ;
-%Straight Lines [id:da9011910199069091] 
-\draw    (257.51,1649.19) -- (208.65,1684.59) ;
-%Shape: Polygon [id:ds9417351677746437] 
-\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (257.51,1649.19) -- (233.08,1666.89) -- (190.57,1649.19) -- cycle ;
-%Shape: Polygon [id:ds41356782744103726] 
-\draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (233.08,1666.89) -- (208.65,1684.59) -- (190.57,1649.19) -- cycle ;
-%Shape: Polygon [id:ds6477383557598548] 
-\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (275.59,1684.59) -- (208.65,1684.59) -- (233.08,1666.89) -- cycle ;
-%Shape: Polygon [id:ds6418413409308701] 
-\draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (233.08,1666.89) -- (275.59,1684.59) -- (257.51,1649.19) -- cycle ;
-
-% Text Node
-\draw (150.85,1470.82) node [anchor=north west][inner sep=0.75pt]    {$l_{1}$};
-% Text Node
-\draw (150.85,1511.31) node [anchor=north west][inner sep=0.75pt]    {$l_{2}$};
-% Text Node
-\draw (192.65,1458.57) node [anchor=north west][inner sep=0.75pt]    {$A$};
-% Text Node
-\draw (236.06,1457.84) node [anchor=north west][inner sep=0.75pt]    {$B$};
-% Text Node
-\draw (197.2,1527.03) node [anchor=north west][inner sep=0.75pt]    {$C$};
-% Text Node
-\draw (244.23,1526.29) node [anchor=north west][inner sep=0.75pt]    {$D$};
-% Text Node
-\draw    (356,1465.34) -- (415,1465.34) -- (415,1485.34) -- (356,1485.34) -- cycle  ;
-\draw (357,1466.34) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$\pllg ABDC$};
-% Text Node
-\draw    (271,1572.34) -- (330,1572.34) -- (330,1608.34) -- (271,1608.34) -- cycle  ;
-\draw (272,1573.34) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$ \begin{array}{l}
-AB//CD\\
-AC//BD
-\end{array}$};
-% Text Node
-\draw (427,1528.01) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$ \begin{array}{l}
-AB=CD\\
-AB//CD
-\end{array}$};
-% Text Node
-\draw (426,1574.01) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$ \begin{array}{l}
-AB=CD\\
-AC=BD
-\end{array}$};
-% Text Node
-\draw (140,1573.01) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$ \begin{array}{l}
-\angle B=\angle C\\
-\angle A=\angle D
-\end{array}$};
-% Text Node
-\draw (178.35,1637.76) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
-% Text Node
-\draw (259.96,1636.08) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
-% Text Node
-\draw (192.21,1679.79) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
-% Text Node
-\draw (275.57,1676.72) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
-% Text Node
-\draw (226.55,1666.63) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$O$};
-% Text Node
-\draw (210,1572.34) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {平行判定};
-% Text Node
-\draw (352,1573.34) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {平行线相截};
-% Text Node
-\draw (333,1650.01) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$ \begin{array}{l}
-AO=DO\\
-BO=CO
-\end{array}$};
-% Connection
-\draw    (330,1581.83) -- (424.08,1554.66) ;
-\draw [shift={(426,1554.11)}, rotate = 163.89] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-% Connection
-\draw    (330,1590.47) -- (423,1590.87) ;
-\draw [shift={(425,1590.88)}, rotate = 180.24] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-% Connection
-\draw    (199,1590.09) -- (269,1590.26) ;
-\draw [shift={(271,1590.27)}, rotate = 180.15] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-% Connection
-\draw    (313.8,1572.34) -- (376.92,1486.95) ;
-\draw [shift={(378.11,1485.34)}, rotate = 126.47] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-% Connection
-\draw    (199,1574.12) -- (364.85,1486.28) ;
-\draw [shift={(366.62,1485.34)}, rotate = 152.09] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-% Connection
-\draw    (438.9,1527.01) -- (397.27,1486.73) ;
-\draw [shift={(395.83,1485.34)}, rotate = 44.06] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-% Connection
-\draw    (349.86,1649.01) -- (316.93,1609.87) ;
-\draw [shift={(315.64,1608.34)}, rotate = 49.93] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw   (237.93, 1481.35) circle [x radius= 5, y radius= 5]   ;
-\draw   (258.27, 1526.25) circle [x radius= 5, y radius= 5]   ;
-\draw   (196.01, 1481.35) circle [x radius= 5, y radius= 5]   ;
-\draw   (214.97, 1526.25) circle [x radius= 5, y radius= 5]   ;
-\end{tikzpicture}
-
-\begin{theorem}
-    \textbf{平行四边形的性质}
-    \begin{itemize}
-        \item 性质1-对边:1组对边平行且相等，或 2组对边平行，或 2组对边相等
-        \item 性质2-对角:2组对角相等
-        \item 性质3-临边:  无关系
-        \item 性质4-临角:  无关系（临角互补） 
-        \item 性质5-对角线:对角线相互平分
-    \end{itemize}
-\end{theorem}
 
 
 
 
 
 \begin{theorem}
-    \textbf{平行四边形重要结论：对角线与过O直线}
+    \textbf{平行四边形重要推论：对角线与过O直线---“4”}
     \begin{itemize}
-        \item 结论：单对角线分全等
-        \item 结论：双对角线分四个等面积三角形        
-        \item 结论: 过 O 直线与对角线形成全等三角形  
+        \item 结论：单对角线分两等---全等
+        \item 结论：双对角线分四等---等面积
+        \item 结论：过 O 直线与对角线成全等
+        \item 结论：过 O 直线平分面积与周长       
     \end{itemize}
 \end{theorem}
 
 \begin{theorem}
-    \textbf{平行四边形重要结论：关于面积}
+    \textbf{平行四边形重要推论：关于面积---“3”}
     \begin{itemize}
-        \item 结论: 过 O 直线平分面积与周长  
-        \item 结论: 如图   
-        \item 结论: 如图   
-        \item 结论: 如图   
+        \item 结论：十字平行分   
+        \item 结论：顶点对边分
+        \item 结论：四顶点加一点分   
     \end{itemize}
 \end{theorem}
 
@@ -674,129 +565,32 @@ BO=CO
 
 \cleardoublepage
 
-本节的重点在于:“212”---“两条对边，一个对称中心，两条对角线”，理解\ubi{对边平行}是平四的核心性质, 
+
+
+
+
+
+
+
+
+
+
+
+\cleardoublepage
+\section{课堂随练}
+
+本节的重点在于:“两条对边，一个对称中心，两条对角线”，理解\ubi{对边平行}是平四的核心性质, 
 \ubi{对称中心}是平四最重要的几何中心(作图、面积题常用)，\ubi{对角线}对于整个四边形的分割起核心作用（证明题常用）。
 
 
-\begin{example}
-    \sidenote{
-        【提示】
-        \begin{itemize}
-            \item 过圆心的直线总是平分圆的周长和面积, 实际上任何一个中心对称图形都有这个性质：过对称中心的
-            直线，平分周长和面积。
-            \item 想想如果一条线要同时平分两个中心对称图形的面积和周长，该怎么办？
-        \end{itemize}    
-    }
-    在一块平行四边形的稻田里有一圆形的水池，为了给稻田浇水，并使稻田里的
-    水量趋于均匀，现要从水池引一条笔直的水渠(水渠的宽度忽略不计)，
-    请你设计一种方案，使水渠两侧的稻田面积相等，并说明你的理由.\\ \\
 
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,939); %set diagram left start at 0, and has height of 939
-    %Shape: Parallelogram [id:dp21965265876855633] 
-    \draw   (310.23,765.65) -- (407.52,765.65) -- (353.43,841.65) -- (256.14,841.65) -- cycle ;
-    %Shape: Circle [id:dp05139693308100379] 
-    \draw   (319,827.01) .. controls (319,819.08) and (325.43,812.65) .. (333.36,812.65) .. controls (341.29,812.65) and (347.71,819.08) .. (347.71,827.01) .. controls (347.71,834.94) and (341.29,841.37) .. (333.36,841.37) .. controls (325.43,841.37) and (319,834.94) .. (319,827.01) -- cycle ;
-    %Shape: Circle [id:dp8600513021489369] 
-    \draw   (446,810.29) .. controls (446,798.66) and (455.43,789.22) .. (467.07,789.22) .. controls (478.71,789.22) and (488.14,798.66) .. (488.14,810.29) .. controls (488.14,821.93) and (478.71,831.37) .. (467.07,831.37) .. controls (455.43,831.37) and (446,821.93) .. (446,810.29) -- cycle ;
-    %Straight Lines [id:da2613202665852332] 
-    \draw  [dash pattern={on 0.84pt off 2.51pt}]  (433.07,777.29) -- (501.07,843.29) ;
-    \end{tikzpicture}
-\end{example}
+\subsection{基础：性质、角度、长度、面积、坐标}
 
-
-
-\begin{exercise}
-    \sidenote{
-        【提示】
-        \begin{itemize}
-            \item 平四作图最常用的就是“对称中心”，经常构造新的中心对称图形解决问题
-            \item 如何找对称中心就是需要考虑的第一步，第二步是如何构造中心对称图形
-            \item 对于“找点”，两线交一点；对于“找线”，两点定一线。
-        \end{itemize}
-    }
-    已知平行四边形ABCD是中心对称图形，点E是平面上一点，请仅用无
-    刻度直尺画出点E关于ABCD对称中心的对称点F．\\
-    (1)如图1，点E在ABCD的边AD上；\\
-    (2)如图2，点E在ABCD外．\\
-
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,1083); %set diagram left start at 0, and has height of 1083
-    %Shape: Parallelogram [id:dp8038026768378546] 
-    \draw   (132.66,934.22) -- (229.95,934.22) -- (192.43,986.94) -- (95.14,986.94) -- cycle ;
-    %Shape: Parallelogram [id:dp5462257042242362] 
-    \draw   (319.66,934.22) -- (416.95,934.22) -- (379.43,986.94) -- (282.14,986.94) -- cycle ;
-    %Shape: Circle [id:dp18747520040402943] 
-    \draw  [fill={rgb, 255:red, 74; green, 74; blue, 74 }  ,fill opacity=1 ] (153,934.15) .. controls (153,931.82) and (154.89,929.94) .. (157.21,929.94) .. controls (159.54,929.94) and (161.43,931.82) .. (161.43,934.15) .. controls (161.43,936.48) and (159.54,938.37) .. (157.21,938.37) .. controls (154.89,938.37) and (153,936.48) .. (153,934.15) -- cycle ;
-    %Shape: Circle [id:dp19840861894910566] 
-    \draw  [fill={rgb, 255:red, 74; green, 74; blue, 74 }  ,fill opacity=1 ] (348,919.15) .. controls (348,916.82) and (349.89,914.94) .. (352.21,914.94) .. controls (354.54,914.94) and (356.43,916.82) .. (356.43,919.15) .. controls (356.43,921.48) and (354.54,923.37) .. (352.21,923.37) .. controls (349.89,923.37) and (348,921.48) .. (348,919.15) -- cycle ;
-    % Text Node
-    \draw (115,917.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {A};
-    % Text Node
-    \draw (84,985.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {B};
-    % Text Node
-    \draw (187,983.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {C};
-    % Text Node
-    \draw (231,922.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {D};
-    % Text Node
-    \draw (298,917.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {A};
-    % Text Node
-    \draw (267,985.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {B};
-    % Text Node
-    \draw (370,983.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {C};
-    % Text Node
-    \draw (414,922.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {D};
-    % Text Node
-    \draw (163,908.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {E};
-    % Text Node
-    \draw (364,898.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {E};
-    \end{tikzpicture}
-\end{exercise}
-
-\vspace{1cm}
-
-
-
-
-\begin{example}仅用无刻度直尺作图：
-    \begin{enumerate}[label=(\arabic*)]
-        \item 如图1, 点 A, B, C, D 均在格点上, 在 AC 上找点 E, 使DE//AB;
-        \item 如图2, 点 A, B, C 均在格点上, 作平行四边形 ABCD, 再在 CD 上作点 N , 使 CN = AM;
-        \item 如图3, 过点 C 作 CD ⟂ AB;
-        \item 如图4, 作点EF=$\sqrt{10}$（每个小正方形的边长为1）.
-    \end{enumerate}
-
-    \includegraphics{1-draw3.png}
-\end{example}
-
-\begin{answers}
-    \includegraphics{1-draw3-ans.png}
-\end{answers}
 
 
 
 \begin{example}
-    $$
-    \begin{aligned}
-        &\text{如图 }1,\pllg ABCD,O\text{ 为 }AB\text{ 中点,过点 }B\text{ 作 }AC\text{ 的平行线}.\\
-        &\text{变式}.\text{依照上述方法},\text{如图 }2,3,\text{点 }A,B\text{ 在格点上},\text{点 }C\text{ 在格线上},\text{过点 }C\text{ 作}\\
-        &CD//AB.
-    \end{aligned}
-    $$
 
-    \includegraphics{1-draw4.png}
-\end{example}
-
-
-\begin{answers}
-    \includegraphics{1-draw4-ans.png}
-\end{answers}
-
-
-
-\begin{example}
     如图所示，已知四边形ABCD，从⑴AB//DC；⑵AB=DC；⑶AD//BC；⑷AD=BC；⑸∠A=∠C；⑹∠B=∠D中取两
     个条件加以组合，能推出四边形ABCD是平行四边形的有哪几种情形？请写出具体组合。
 
@@ -822,31 +616,9 @@ BO=CO
     ⑤ ⑶，⑷；⑥ ⑴，⑸；⑦ ⑴，⑹；⑧ ⑶，⑸；⑨ ⑶，⑹．
 \end{answers}
 
-
-\begin{example}
-    如图,四边形 ABCD 是平行四边形.若 $S_{ABCD}=12$, 则 $S_\text{阴影}=\uds$.\\
-    \includegraphics[width=0.5\textwidth]{1-area-1.png}
-\end{example}
-
-\begin{answers}
-        阴影面积=3
-\end{answers}
-
-\begin{example}
-    $$
-    \begin{aligned}
-        &\text{如图,在平面直角坐标系中},A(1,1),B(2,-1),\text{且以A,B,O,C 为顶点的四边形为平行四}\\& \text{边形,则点C的坐标为}\uds
-    \end{aligned}
-    $$
-    \includegraphics[width=0.5\textwidth]{1-corrdinate.png}
-\end{example}
-
-
-
-\clearpage
-\section{平行四边形的性质---课堂练习}
-
-\subsection{基础：性质、角度、长度、面积、坐标}
+\begin{examplespace}
+    \vspace{4cm}
+\end{examplespace}
 
 
 \begin{example}有下列说法：\\
@@ -868,7 +640,7 @@ A．①②④	B．①③④	C．①②③	D．①②③④
 
 
 
-\exercise{}下面关于平行四边形的性质描述正确的是（　　）\\
+\example{}下面关于平行四边形的性质描述正确的是（　　）\\
 A．平行四边形的对称中心是对角线的交点\\
 B．平行四边形的对称轴是对角线所在直线\\
 C．平行四边形不是中心对称图形\\
@@ -876,11 +648,7 @@ D．平行四边形既不是中心对称图形，也不是轴对称图形
 
 
 
-\exercise{} 平行四边形具有而一般四边形不具有的性质是（    ）
-A．外角和等于	\\
-B．对角线互相平分\\
-C．内角和等于	\\
-D．有两条对角线\\
+
 
 
 \example{}在平行四边形 ABCD 中，$\angle{B}-\angle{A}=20^o$ 则
@@ -891,63 +659,10 @@ $\angle{D}$的度数是？
 \end{examplespace}
 
 
-\exercise{}如图，在平行四边形 ABCD 中，$\angle{D}=100^o$，\angle{DAB}的平
-分线AE交CD于点E，连接BE, 若$AE=AB$，则\angle{EBC}的度数为\underline{\hspace{2em}}．
-
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,862); %set diagram left start at 0, and has height of 862
-%Shape: Parallelogram [id:dp5579947545995634] 
-\draw   (127.87,631.47) -- (227.51,631.47) -- (185.88,684.8) -- (86.24,684.8) -- cycle ;
-%Straight Lines [id:da08553774693266791] 
-\draw    (86.24,684.8) -- (171.2,632.38) ;
-%Straight Lines [id:da863825186807412] 
-\draw    (185.88,684.8) -- (171.2,632.38) ;
-% Text Node
-\draw (69.64,680.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
-% Text Node
-\draw (187.12,679.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
-% Text Node
-\draw (228.84,617.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
-% Text Node
-\draw (113.36,615.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
-% Text Node
-\draw (170.16,613.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$E$};
-\end{tikzpicture}
-
-\begin{answers}
-    故答案为: 30度
-\end{answers}
 
 
-\exercise{}如图，四边形ABCD是平行四边形，∠ABC=70°， BE平分∠ABC且交AD于点E，DF//BE
-且交BC于点F，则∠ADF的度数为\underline{\hspace{3em}}．
 
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,862); %set diagram left start at 0, and has height of 862
-%Shape: Parallelogram [id:dp06038619163205894] 
-\draw   (84.23,584.47) -- (183.87,584.47) -- (142.24,637.8) -- (42.6,637.8) -- cycle ;
-%Straight Lines [id:da3560331603396958] 
-\draw    (42.6,637.8) -- (127.56,585.38) ;
-%Straight Lines [id:da8763632420613607] 
-\draw    (100.43,637.6) -- (183.87,584.47) ;
-% Text No
-\draw (67,567.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
-% Text Node
-\draw (28.48,633.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
-% Text Node
-\draw (139.2,632.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
-% Text Node
-\draw (183.72,576.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
-% Text Node
-\draw (126.52,566.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$E$};
-% Text Node
-\draw (94.52,641.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$F$};
-\end{tikzpicture}
-
-
-\exercise{}如图，在平行四边形ABCD中，已知∠ODA=90°，AC=10cm ，BD=6cm ，则AD的长为（\ \ \ ）\\
+\example{}如图，在平行四边形ABCD中，已知∠ODA=90°，AC=10cm ，BD=6cm ，则AD的长为（\ \ \ ）\\
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,862); %set diagram left start at 0, and has height of 862
@@ -977,7 +692,9 @@ A. 4cm \ \ \ B. 5cm \ \ \  C. 6cm \ \ \  D. 8cm
 
 
 
-\exercise{} 在平行四边形ABCD中，AD=10，AE平分∠BAD交BC于点E，DF平分∠ADC交BC于点F，且EF=2，则AB的长为( \ )\\
+
+
+\example{} 在平行四边形ABCD中，AD=10，AE平分∠BAD交BC于点E，DF平分∠ADC交BC于点F，且EF=2，则AB的长为( \ )\\
 A．4  \hspace{2em}	B．6 \hspace{2em} C．6或8 \hspace{2em} D．4或6
 
 \begin{answers}
@@ -986,10 +703,10 @@ A．4  \hspace{2em}	B．6 \hspace{2em} C．6或8 \hspace{2em} D．4或6
 \end{answers}
 
 
-\begin{exercise}
+\begin{example}
     如图，在平行四边形ABCD中，P是AD边上一点．已知 $S_{△ABP}=3.5cm^2$，
     $S_{△CDP}=2.5cm^2$ ，则ABCD的面积是 \underline{\hspace{3em}}cm2．
-\end{exercise}
+\end{example}
 
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
@@ -1068,7 +785,31 @@ A．1/2  \hspace{2em}	B． 1/3 \hspace{2em}	C．1/4	\hspace{2em} D．1/5
     阴影部分的面积与▱ABCD的面积比值是1/4．故选：C．
 \end{answers}
 
+\begin{example}
+    如图，在平面直角坐标系中，若平行四边形ABCD的三个顶点的坐标分别是A(-1,0)、B(-2,-3)、
+    D(3,2)，则顶点C的坐标是 \uds ．
+\end{example}
 
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,939); %set diagram left start at 0, and has height of 939
+%Shape: Axis 2D [id:dp5911960483097314] 
+\draw  (49.43,772.08) -- (176.43,772.08)(112.43,705.79) -- (112.43,833.08) (169.43,767.08) -- (176.43,772.08) -- (169.43,777.08) (107.43,712.79) -- (112.43,705.79) -- (117.43,712.79)  ;
+%Shape: Parallelogram [id:dp41646868203937903] 
+\draw   (89.9,771.01) -- (161.47,738.58) -- (151.6,789.07) -- (80.03,821.51) -- cycle ;
+% Text Node
+\draw (162,721.65) node [anchor=north west][inner sep=0.75pt]   [align=left] {D};
+% Text Node
+\draw (76,751.65) node [anchor=north west][inner sep=0.75pt]   [align=left] {A};
+% Text Node
+\draw (68,816.65) node [anchor=north west][inner sep=0.75pt]   [align=left] {B};
+% Text Node
+\draw (151.6,789.07) node [anchor=north west][inner sep=0.75pt]   [align=left] {C};
+\end{tikzpicture}
+
+\begin{answers}
+    故答案为: (2,-1)．
+\end{answers}   
 
 \cleardoublepage
 
@@ -1094,51 +835,8 @@ A．2个     \ \  B．3个  \ \      C．4个  \ \       D．5个
 
 
 
-\begin{example}
-    在平行四边形ABCD中，对角线AC，BD相交于点O，以点O为坐标原点建立平面直角坐标系，
-    其中A(a,b)，B(a-1,b+2)，C(3,1)，则点D的坐标是\underline{\hspace{3em}}．
-\end{example}
-
-\begin{answers}
-    故答案为: （4,-1）
-\end{answers}
-
-
-\begin{exercise}
-    如图，在平面直角坐标系中，若平行四边形ABCD的三个顶点的坐标分别是A(-1,0)、B(-2,-3)、
-    D(3,2)，则顶点C的坐标是 \uds ．
-\end{exercise}
-
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,939); %set diagram left start at 0, and has height of 939
-%Shape: Axis 2D [id:dp5911960483097314] 
-\draw  (49.43,772.08) -- (176.43,772.08)(112.43,705.79) -- (112.43,833.08) (169.43,767.08) -- (176.43,772.08) -- (169.43,777.08) (107.43,712.79) -- (112.43,705.79) -- (117.43,712.79)  ;
-%Shape: Parallelogram [id:dp41646868203937903] 
-\draw   (89.9,771.01) -- (161.47,738.58) -- (151.6,789.07) -- (80.03,821.51) -- cycle ;
-% Text Node
-\draw (162,721.65) node [anchor=north west][inner sep=0.75pt]   [align=left] {D};
-% Text Node
-\draw (76,751.65) node [anchor=north west][inner sep=0.75pt]   [align=left] {A};
-% Text Node
-\draw (68,816.65) node [anchor=north west][inner sep=0.75pt]   [align=left] {B};
-% Text Node
-\draw (151.6,789.07) node [anchor=north west][inner sep=0.75pt]   [align=left] {C};
-\end{tikzpicture}
-
-\begin{answers}
-    故答案为: (2,-1)．
-\end{answers}   
-
-
-\exercise{}在平面直角坐标系里，A(1,0),B(0,2),C(-4,2)，若以A、B、C、D为顶点的四边形是平
-行四边形，则点D的坐标为\uds．
-
-
-
-
 \cleardoublepage
-\subsection{拔高：性质相关证明问题}
+\subsection{提高：性质相关证明问题}
 
 \begin{example}
     如图，平行四边形ABCD的对角线AC，BD交于点O，AE平分∠BAD，交BC于点E，且∠ADC=60°,
@@ -1185,106 +883,92 @@ A．2个     \ \  B．3个  \ \      C．4个  \ \       D．5个
     \vspace{3cm}
 \end{examplespace}
 
+\subsection{提高：绘图专题}
 \begin{example}
-    如图，E是 \pllg ABCD内一点，ED⊥CD，EB⊥BC，∠AED=135°，连接 ，AC，BD，下列结
-    论：\\①∠ADE=∠ABE；\\②△BCE为等腰直角三角形； \\③$ DE+AB=\sqrt{2}BD $；\\④ $AE^2+AB^2=AC^2 $，
-    \\其中正确的个数有 （  \  ）\\
-    A．1 个	 \ \ B．2 个	\ \ C．3 个	\ \ D．4 个
+    \sidenote{
+        【提示】
+        \begin{itemize}
+            \item 过圆心的直线总是平分圆的周长和面积, 实际上任何一个中心对称图形都有这个性质：过对称中心的
+            直线，平分周长和面积。
+            \item 想想如果一条线要同时平分两个中心对称图形的面积和周长，该怎么办？
+        \end{itemize}    
+    }
+    在一块平行四边形的稻田里有一圆形的水池，为了给稻田浇水，并使稻田里的
+    水量趋于均匀，现要从水池引一条笔直的水渠(水渠的宽度忽略不计)，
+    请你设计一种方案，使水渠两侧的稻田面积相等，并说明你的理由.\\ \\
 
     \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
     \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,1954); %set diagram left start at 0, and has height of 1954
-    %Shape: Parallelogram [id:dp0914658837696507] 
-    \draw   (101.85,861.66) -- (198.68,861.66) -- (161.76,934.11) -- (64.93,934.11) -- cycle ;
-    %Straight Lines [id:da10522305593889225] 
-    \draw    (101.85,861.66) -- (101.85,893.33) ;
-    %Straight Lines [id:da2586344429533527] 
-    \draw    (64.93,934.11) -- (101.85,893.33) ;
-    %Straight Lines [id:da6918464985413655] 
-    \draw    (101.85,861.66) -- (161.76,934.11) ;
-    %Straight Lines [id:da9211828674028979] 
-    \draw    (64.93,934.11) -- (198.68,861.66) ;
-    %Straight Lines [id:da33579659644280735] 
-    \draw    (101.85,893.33) -- (198.68,861.66) ;
-    %Straight Lines [id:da029590750307863622] 
-    \draw    (101.85,893.33) -- (161.76,934.11) ;
-    % Text Node
-    \draw (47.48,928.53) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
-    % Text Node
-    \draw (161.76,934.11) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
-    % Text Node
-    \draw (199.61,846.47) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
-    % Text Node
-    \draw (84.65,846.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
-    % Text Node
-    \draw (89,882.33) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E$};
+    %uncomment if require: \path (0,939); %set diagram left start at 0, and has height of 939
+    %Shape: Parallelogram [id:dp21965265876855633] 
+    \draw   (310.23,765.65) -- (407.52,765.65) -- (353.43,841.65) -- (256.14,841.65) -- cycle ;
+    %Shape: Circle [id:dp05139693308100379] 
+    \draw   (319,827.01) .. controls (319,819.08) and (325.43,812.65) .. (333.36,812.65) .. controls (341.29,812.65) and (347.71,819.08) .. (347.71,827.01) .. controls (347.71,834.94) and (341.29,841.37) .. (333.36,841.37) .. controls (325.43,841.37) and (319,834.94) .. (319,827.01) -- cycle ;
+    %Shape: Circle [id:dp8600513021489369] 
+    \draw   (446,810.29) .. controls (446,798.66) and (455.43,789.22) .. (467.07,789.22) .. controls (478.71,789.22) and (488.14,798.66) .. (488.14,810.29) .. controls (488.14,821.93) and (478.71,831.37) .. (467.07,831.37) .. controls (455.43,831.37) and (446,821.93) .. (446,810.29) -- cycle ;
+    %Straight Lines [id:da2613202665852332] 
+    \draw  [dash pattern={on 0.84pt off 2.51pt}]  (433.07,777.29) -- (501.07,843.29) ;
     \end{tikzpicture}
 \end{example}
 
-\begin{answers}
-    【答案】C
-【分析】①延长DE交AB于点F，根据平行四边形性质和四边形内角和即可得到∠ADE=∠ABE；②先证明△ADF≌△EBF，得AD=BE，又有AD=BC，可得BE=BC，即可得到△BCE为等腰直角三角形；③过点B作 交DC延长线于点G，证明△BDE≌△BCG，再根据勾股定理及等腰直角三角形的性质，可得DE+AB=√2 BD成立；④过点C作CH⊥AB于 ，根据勾股定理即可证明AC^2=AH^2+CH^2=(AB+√2/2 AE)^2+(AB-√2/2 AE)^2=2AB^2+AE^2，可知结论不成立．
-\end{answers}
-
-\begin{examplespace}
-    \vspace{3cm}
-\end{examplespace}
 
 
-\cleardoublepage
-\begin{exercise}
-    如图，在平行四边形ABCD中，对角线AC，BD交于点O，AB=2， ，$∠ABC=60^∘$，直线EF过
-    点O，连接DF，交AC于点G，连BG，△DCF的周长等于6，下列说法正确的个数为（  \  ）
-    \\①$ ∠EOD=90^∘ $；\\② $S_{△DFC} = 2S_{△AEO}$ \\
-    ③ $ S_{△ABG}+S_{△DGC} =\frac{1}{2} S_{\pllg ABCD} $；
-    \\④ $ AE=\frac{6}{5} $．
- 
-    A．1个	\ B．2个\ 	C．3个	\ D．4个
+\begin{example}
+    \sidenote{
+        【提示】
+        \begin{itemize}
+            \item 平四作图最常用的就是“对称中心”，经常构造新的中心对称图形解决问题
+            \item 如何找对称中心就是需要考虑的第一步，第二步是如何构造中心对称图形
+            \item 对于“找点”，两线交一点；对于“找线”，两点定一线。
+        \end{itemize}
+    }
+    已知平行四边形ABCD是中心对称图形，点E是平面上一点，请仅用无
+    刻度直尺画出点E关于ABCD对称中心的对称点F．\\
+    (1)如图1，点E在ABCD的边AD上；\\
+    (2)如图2，点E在ABCD外．\\
 
     \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
     \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,1954); %set diagram left start at 0, and has height of 1954
-    %Shape: Parallelogram [id:dp5445386943379376] 
-    \draw   (109.72,1032.66) -- (240.78,1032.66) -- (190.8,1105.11) -- (59.74,1105.11) -- cycle ;
-    %Straight Lines [id:da7725624291564848] 
-    \draw    (157.33,1104.34) -- (144.33,1031.34) ;
-    %Straight Lines [id:da679340776586659] 
-    \draw    (109.72,1032.66) -- (190.8,1105.11) ;
-    %Straight Lines [id:da3761082926784409] 
-    \draw    (59.74,1105.11) -- (240.78,1032.66) ;
-    %Straight Lines [id:da7134684897107266] 
-    \draw    (157.33,1104.34) -- (240.78,1032.66) ;
-    %Straight Lines [id:da33257673335666316] 
-    \draw    (174.33,1089.34) -- (59.74,1105.11) ;
+    %uncomment if require: \path (0,1083); %set diagram left start at 0, and has height of 1083
+    %Shape: Parallelogram [id:dp8038026768378546] 
+    \draw   (132.66,934.22) -- (229.95,934.22) -- (192.43,986.94) -- (95.14,986.94) -- cycle ;
+    %Shape: Parallelogram [id:dp5462257042242362] 
+    \draw   (319.66,934.22) -- (416.95,934.22) -- (379.43,986.94) -- (282.14,986.94) -- cycle ;
+    %Shape: Circle [id:dp18747520040402943] 
+    \draw  [fill={rgb, 255:red, 74; green, 74; blue, 74 }  ,fill opacity=1 ] (153,934.15) .. controls (153,931.82) and (154.89,929.94) .. (157.21,929.94) .. controls (159.54,929.94) and (161.43,931.82) .. (161.43,934.15) .. controls (161.43,936.48) and (159.54,938.37) .. (157.21,938.37) .. controls (154.89,938.37) and (153,936.48) .. (153,934.15) -- cycle ;
+    %Shape: Circle [id:dp19840861894910566] 
+    \draw  [fill={rgb, 255:red, 74; green, 74; blue, 74 }  ,fill opacity=1 ] (348,919.15) .. controls (348,916.82) and (349.89,914.94) .. (352.21,914.94) .. controls (354.54,914.94) and (356.43,916.82) .. (356.43,919.15) .. controls (356.43,921.48) and (354.54,923.37) .. (352.21,923.37) .. controls (349.89,923.37) and (348,921.48) .. (348,919.15) -- cycle ;
     % Text Node
-    \draw (92.95,1017.53) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
+    \draw (115,917.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {A};
     % Text Node
-    \draw (44.63,1097.11) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
+    \draw (84,985.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {B};
     % Text Node
-    \draw (194.86,1098.47) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
+    \draw (187,983.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {C};
     % Text Node
-    \draw (242.26,1019.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
+    \draw (231,922.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {D};
     % Text Node
-    \draw (137.15,1014.33) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E$};
+    \draw (298,917.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {A};
     % Text Node
-    \draw (167.15,1071.33) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$G$};
+    \draw (267,985.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {B};
     % Text Node
-    \draw (129.15,1059.33) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$O$};
+    \draw (370,983.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {C};
     % Text Node
-    \draw (149.15,1106.33) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$F$};
+    \draw (414,922.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {D};
+    % Text Node
+    \draw (163,908.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {E};
+    % Text Node
+    \draw (364,898.79) node [anchor=north west][inner sep=0.75pt]   [align=left] {E};
     \end{tikzpicture}
-\end{exercise}
+\end{example}
 
 
-
-\begin{examplespace}
-    \vspace{2cm}
-\end{examplespace}
+\cleardoublepage
 
 
 
 
-\begin{exercise}
+\subsection{提高：动点问题}
+\begin{example}
     如图，在平行四边形ABCD中，∠BAC=90°，∠B=60°，AB=6．动点P从点A出发沿AD以1cm/s速度向终
     点D运动，同时点Q从点C出发，以4cm/s速度沿射线CB运动，当点P到达终点时，点Q也随之停止运
     动，设点P运动的时间为t秒．\\
@@ -1294,7 +978,7 @@ A．2个     \ \  B．3个  \ \      C．4个  \ \       D．5个
     值；若不存在，请说明理由．
 
     \includegraphics{images/dongdian-t1.jpg}
-\end{exercise}
+\end{example}
 
 \begin{answers}
     (1)BQ=12-4t(0≤t≤3)或BQ=4t-12(3<t≤12)
@@ -1347,13 +1031,249 @@ A．2个     \ \  B．3个  \ \      C．4个  \ \       D．5个
 \end{exercise}
 
 \begin{exercise} 课堂回忆\\
-    关于平四的四个重要面积推论(请绘图说明)：
-    \begin{enumerate}
-        \item  
-        \item  \vspace{3cm}
-        \item  \vspace{3cm}
-        \item  \vspace{3cm}
-    \end{enumerate}
+    关于平四的“4+3”个重要推论(请绘图说明)：
 \end{exercise}
 
+
+
+
+
+
+\cleardoublepage
+\section{课后作业}
+\exercise{} 平行四边形具有而一般四边形不具有的性质是（    ）
+A．外角和等于	\\
+B．对角线互相平分\\
+C．内角和等于	\\
+D．有两条对角线\\
+
+\exercise{}如图，在平行四边形 ABCD 中，$\angle{D}=100^o$，\angle{DAB}的平
+分线AE交CD于点E，连接BE, 若$AE=AB$，则\angle{EBC}的度数为\underline{\hspace{2em}}．
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,862); %set diagram left start at 0, and has height of 862
+%Shape: Parallelogram [id:dp5579947545995634] 
+\draw   (127.87,631.47) -- (227.51,631.47) -- (185.88,684.8) -- (86.24,684.8) -- cycle ;
+%Straight Lines [id:da08553774693266791] 
+\draw    (86.24,684.8) -- (171.2,632.38) ;
+%Straight Lines [id:da863825186807412] 
+\draw    (185.88,684.8) -- (171.2,632.38) ;
+% Text Node
+\draw (69.64,680.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
+% Text Node
+\draw (187.12,679.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
+% Text Node
+\draw (228.84,617.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
+% Text Node
+\draw (113.36,615.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
+% Text Node
+\draw (170.16,613.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$E$};
+\end{tikzpicture}
+
+\begin{answers}
+    故答案为: 30度
+\end{answers}
+
+
+\exercise{}如图，四边形ABCD是平行四边形，∠ABC=70°， BE平分∠ABC且交AD于点E，DF//BE
+且交BC于点F，则∠ADF的度数为\underline{\hspace{3em}}．
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,862); %set diagram left start at 0, and has height of 862
+%Shape: Parallelogram [id:dp06038619163205894] 
+\draw   (84.23,584.47) -- (183.87,584.47) -- (142.24,637.8) -- (42.6,637.8) -- cycle ;
+%Straight Lines [id:da3560331603396958] 
+\draw    (42.6,637.8) -- (127.56,585.38) ;
+%Straight Lines [id:da8763632420613607] 
+\draw    (100.43,637.6) -- (183.87,584.47) ;
+% Text No
+\draw (67,567.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
+% Text Node
+\draw (28.48,633.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
+% Text Node
+\draw (139.2,632.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
+% Text Node
+\draw (183.72,576.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
+% Text Node
+\draw (126.52,566.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$E$};
+% Text Node
+\draw (94.52,641.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$F$};
+\end{tikzpicture}
+
+\begin{exercise}
+    如图,四边形 ABCD 是平行四边形.若 $S_{ABCD}=12$, 则 $S_\text{阴影}=\uds$.\\
+    \includegraphics[width=0.5\textwidth]{1-area-1.png}
+\end{exercise}
+
+\begin{answers}
+        阴影面积=3
+\end{answers}
+
+
+\exercise{}在平面直角坐标系里，A(1,0),B(0,2),C(-4,2)，若以A、B、C、D为顶点的四边形是平
+行四边形，则点D的坐标为\uds．
+
+\begin{examplespace}
+    \vspace{2cm}
+\end{examplespace}
+
+
+\cleardoublepage
+\begin{exercise}
+    在平行四边形ABCD中，对角线AC，BD相交于点O，以点O为坐标原点建立平面直角坐标系，
+    其中A(a,b)，B(a-1,b+2)，C(3,1)，则点D的坐标是\underline{\hspace{3em}}．
+\end{exercise}
+
+\begin{answers}
+    故答案为: （4,-1）
+\end{answers}
+
+\begin{examplespace}
+    \vspace{2cm}
+\end{examplespace}
+
+
+
+
+
+\begin{exercise}
+    $$
+    \begin{aligned}
+        &\text{如图,在平面直角坐标系中},A(1,1),B(2,-1),\text{且以A,B,O,C 为顶点的四边形为平行四}\\& \text{边形,则点C的坐标为}\uds
+    \end{aligned}
+    $$
+    \includegraphics[width=0.5\textwidth]{1-corrdinate.png}
+\end{exercise}
+
+
+
+\begin{exercise}
+    如图，在平行四边形ABCD中，对角线AC，BD交于点O，AB=2， ，$∠ABC=60^∘$，直线EF过
+    点O，连接DF，交AC于点G，连BG，△DCF的周长等于6，下列说法正确的个数为（  \  ）
+    \\①$ ∠EOD=90^∘ $；\\② $S_{△DFC} = 2S_{△AEO}$ \\
+    ③ $ S_{△ABG}+S_{△DGC} =\frac{1}{2} S_{\pllg ABCD} $；
+    \\④ $ AE=\frac{6}{5} $．
+ 
+    A．1个	\ B．2个\ 	C．3个	\ D．4个
+
+    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    %uncomment if require: \path (0,1954); %set diagram left start at 0, and has height of 1954
+    %Shape: Parallelogram [id:dp5445386943379376] 
+    \draw   (109.72,1032.66) -- (240.78,1032.66) -- (190.8,1105.11) -- (59.74,1105.11) -- cycle ;
+    %Straight Lines [id:da7725624291564848] 
+    \draw    (157.33,1104.34) -- (144.33,1031.34) ;
+    %Straight Lines [id:da679340776586659] 
+    \draw    (109.72,1032.66) -- (190.8,1105.11) ;
+    %Straight Lines [id:da3761082926784409] 
+    \draw    (59.74,1105.11) -- (240.78,1032.66) ;
+    %Straight Lines [id:da7134684897107266] 
+    \draw    (157.33,1104.34) -- (240.78,1032.66) ;
+    %Straight Lines [id:da33257673335666316] 
+    \draw    (174.33,1089.34) -- (59.74,1105.11) ;
+    % Text Node
+    \draw (92.95,1017.53) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
+    % Text Node
+    \draw (44.63,1097.11) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
+    % Text Node
+    \draw (194.86,1098.47) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
+    % Text Node
+    \draw (242.26,1019.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
+    % Text Node
+    \draw (137.15,1014.33) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E$};
+    % Text Node
+    \draw (167.15,1071.33) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$G$};
+    % Text Node
+    \draw (129.15,1059.33) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$O$};
+    % Text Node
+    \draw (149.15,1106.33) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$F$};
+    \end{tikzpicture}
+\end{exercise}
+
+\begin{examplespace}
+    \vspace{3cm}
+\end{examplespace}
+
+
+\begin{exercise}
+    如图，E是 \pllg ABCD内一点，ED⊥CD，EB⊥BC，∠AED=135°，连接 ，AC，BD，下列结
+    论：\\①∠ADE=∠ABE；\\②△BCE为等腰直角三角形； \\③$ DE+AB=\sqrt{2}BD $；\\④ $AE^2+AB^2=AC^2 $，
+    \\其中正确的个数有 （  \  ）\\
+    A．1 个	 \ \ B．2 个	\ \ C．3 个	\ \ D．4 个
+
+    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    %uncomment if require: \path (0,1954); %set diagram left start at 0, and has height of 1954
+    %Shape: Parallelogram [id:dp0914658837696507] 
+    \draw   (101.85,861.66) -- (198.68,861.66) -- (161.76,934.11) -- (64.93,934.11) -- cycle ;
+    %Straight Lines [id:da10522305593889225] 
+    \draw    (101.85,861.66) -- (101.85,893.33) ;
+    %Straight Lines [id:da2586344429533527] 
+    \draw    (64.93,934.11) -- (101.85,893.33) ;
+    %Straight Lines [id:da6918464985413655] 
+    \draw    (101.85,861.66) -- (161.76,934.11) ;
+    %Straight Lines [id:da9211828674028979] 
+    \draw    (64.93,934.11) -- (198.68,861.66) ;
+    %Straight Lines [id:da33579659644280735] 
+    \draw    (101.85,893.33) -- (198.68,861.66) ;
+    %Straight Lines [id:da029590750307863622] 
+    \draw    (101.85,893.33) -- (161.76,934.11) ;
+    % Text Node
+    \draw (47.48,928.53) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
+    % Text Node
+    \draw (161.76,934.11) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
+    % Text Node
+    \draw (199.61,846.47) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$C$};
+    % Text Node
+    \draw (84.65,846.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
+    % Text Node
+    \draw (89,882.33) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E$};
+    \end{tikzpicture}
+\end{exercise}
+
+\begin{answers}
+    【答案】C
+【分析】①延长DE交AB于点F，根据平行四边形性质和四边形内角和即可得到∠ADE=∠ABE；②先证明△ADF≌△EBF，得AD=BE，又有AD=BC，可得BE=BC，即可得到△BCE为等腰直角三角形；③过点B作 交DC延长线于点G，证明△BDE≌△BCG，再根据勾股定理及等腰直角三角形的性质，可得DE+AB=√2 BD成立；④过点C作CH⊥AB于 ，根据勾股定理即可证明AC^2=AH^2+CH^2=(AB+√2/2 AE)^2+(AB-√2/2 AE)^2=2AB^2+AE^2，可知结论不成立．
+\end{answers}
+
+\begin{examplespace}
+    \vspace{3cm}
+\end{examplespace}
+
+
+\begin{exercise}仅用无刻度直尺作图：
+    \begin{enumerate}[label=(\arabic*)]
+        \item 如图1, 点 A, B, C, D 均在格点上, 在 AC 上找点 E, 使DE//AB;
+        \item 如图2, 点 A, B, C 均在格点上, 作平行四边形 ABCD, 再在 CD 上作点 N , 使 CN = AM;
+        \item 如图3, 过点 C 作 CD ⟂ AB;
+        \item 如图4, 作点EF=$\sqrt{10}$（每个小正方形的边长为1）.
+    \end{enumerate}
+
+    \includegraphics{1-draw3.png}
+\end{exercise}
+
+\begin{answers}
+    \includegraphics{1-draw3-ans.png}
+\end{answers}
+
+
+
+\begin{exercise}
+    $$
+    \begin{aligned}
+        &\text{如图 }1,\pllg ABCD,O\text{ 为 }AB\text{ 中点,过点 }B\text{ 作 }AC\text{ 的平行线}.\\
+        &\text{变式}.\text{依照上述方法},\text{如图 }2,3,\text{点 }A,B\text{ 在格点上},\text{点 }C\text{ 在格线上},\text{过点 }C\text{ 作}\\
+        &CD//AB.
+    \end{aligned}
+    $$
+
+    \includegraphics{1-draw4.png}
+\end{exercise}
+
+
+\begin{answers}
+    \includegraphics{1-draw4-ans.png}
+\end{answers}
 
