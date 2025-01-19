@@ -1,6 +1,6 @@
 %\setchapterstyle{kao}
 \setchapterpreamble[u]{\margintoc}
-\chapter{平行四边形}
+\chapter{第一讲：平行四边形的性质}
 %\labch{pingxing}
 
 \section{轴对称与中心对称}
@@ -65,26 +65,7 @@
 \end{marginfigure}
 
 
-\marginnote{
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,361); %set diagram left start at 0, and has height of 361
-    %Straight Lines [id:da439573922876374] 
-    \draw    (87,218) -- (87,247.14) ;
-    %Straight Lines [id:da5676159915309784] 
-    \draw    (87,247.14) -- (105,247.14) ;
-    %Straight Lines [id:da32984765214506484] 
-    \draw    (87,247) -- (87,276.14) ;
-    %Straight Lines [id:da33250566801593395] 
-    \draw    (87,276.14) -- (105,276.14) ;
-    % Text Node
-    \draw (65,200) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {对应点是否在原图上};
-    % Text Node
-    \draw (108,238) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {关于线对称};
-    % Text Node
-    \draw (109,266) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {关于点对称};
-    \end{tikzpicture}
-}
+
 
 
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -131,11 +112,30 @@
 
 
 \clearpage
-\marginnote{TODO: 看图技巧}
-
 
 \example{“翻折” 产生 “轴对称”；“旋转” 产生 “中心对称”！不论轴对称还是中心对称，在数学和物理中都有着广泛的应用，
 比如下面四个函数图像。观察图像，识别抽对称或中心对称。}
+
+\marginnote{
+    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    %uncomment if require: \path (0,361); %set diagram left start at 0, and has height of 361
+    %Straight Lines [id:da439573922876374] 
+    \draw    (87,218) -- (87,247.14) ;
+    %Straight Lines [id:da5676159915309784] 
+    \draw    (87,247.14) -- (105,247.14) ;
+    %Straight Lines [id:da32984765214506484] 
+    \draw    (87,247) -- (87,276.14) ;
+    %Straight Lines [id:da33250566801593395] 
+    \draw    (87,276.14) -- (105,276.14) ;
+    % Text Node
+    \draw (65,200) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {对应点是否在原图上};
+    % Text Node
+    \draw (108,238) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {关于线对称};
+    % Text Node
+    \draw (109,266) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {关于点对称};
+    \end{tikzpicture}
+}
 
 % 4 个函数图像
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -163,6 +163,10 @@
 
 \vspace{2cm}
 
+%TODO
+\begin{marginfigure}
+    \includegraphics[width=0.4\textwidth]{1-5-6shape.jpg}
+\end{marginfigure}
 
 \begin{example}
     图中其中既是轴对称图形又是中心对称图形的是（ \ \ ）
@@ -280,33 +284,20 @@
 
 
 \cleardoublepage
-\marginnote{
-    TODO: 需要重新整理，请进一步思考下面3个问题:
-    \begin{itemize}
-        \item 你绘制图形的过程中有没有注意到“中点”的出现，谁是中点，中点坐标公式是什么？
-        \\\underline{\hspace{18em}} 
-        \item 你绘制的图形是轴对称图形么，请根据上面介绍的轴对称规则回答。
-        \\\underline{\hspace{18em}}
-        \item 请根据初一初二所学内容，总结这种图形的特点。
-        \\\underline{\hspace{18em}}
-    \end{itemize}
-    }
 
-\marginnote{
-    体会中点坐标公式对于坐标系内的轴对称和中心对称的重要作用！
-    \begin{itemize}
-        \item 已知对称中心（对称轴），求对应点；
-        \item 已知对应点，求对称中心（对称轴）。
-    \end{itemize}
-}
+
+
+
+
+
+
+
+
+
+
 
 \example{}以下坐标系中，我们已经预先设计好了两个点，请分别以 y 轴为对称轴，以 原点 为对称中心，画出
-对称点。并且在这个过程中体会: 
-\begin{enumerate}
-    \item 中点坐标公式的运用?
-    \item 平行的判定和性质的运用？
-    \item 每个对应点是如何绘制出的?
-\end{enumerate}
+对称点。
 
 
 % 绘制对称图
@@ -314,7 +305,35 @@
 
 
 
+【复习】体会中点坐标公式对于坐标系内的轴对称和中心对称的重要作用！
+\begin{itemize}
+    \item 已知原始点和对称中心（对称轴），求对应点；
 
+    已知 A(-1, 3), 原点O(0,0), 对应点 A' =\uds\\
+    进一步，已知 A(m,n)，原点O(a,b)，对应点 A'=\uds\\
+    
+    \item 已知原始点和对应点，求对称中心（对称轴）。\\
+    已知 A(-1, 3), 对应点A'(1,-3), 对称中心 =\uds\\
+    进一步，已知 A(m,n)，对应点A'(a,b)，对称中心 =\uds\\
+    
+\end{itemize}
+
+
+【引入】请进一步思考下面3个问题:
+\begin{itemize}
+    \item 你绘制图形的过程中有没有注意到“中点”的出现，谁是中点，中点坐标公式是什么？
+    \\\underline{\hspace{18em}} 
+    \item 你绘制的图形是轴对称或者中心对称图形么，请根据上面介绍的对称规则回答。
+    \\\underline{\hspace{18em}}
+    \item 在第二张图形中有没有发现全等三角形的踪迹？由三角形全等我们可以得到哪些推论？
+    \\\underline{\hspace{18em}}
+    \\\underline{\hspace{18em}}
+    \\\underline{\hspace{18em}}
+    \item 连接AA', BB' 我们可以得到一个平行四边形，由以上这些问题，你能推断出平四形的哪些性质？
+    \\\underline{\hspace{18em}}
+    \\\underline{\hspace{18em}}
+    \\\underline{\hspace{18em}}
+\end{itemize}
 
 
 
@@ -502,6 +521,7 @@ BO=CO
         % Text Node
         \draw (513,1028.35) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
     \end{tikzpicture}
+    \vspace{2em}
 }
 \marginnote{    对角线推论1：$ \triangle{ABD} \cong \triangle{BDC} $}
 
@@ -690,6 +710,9 @@ A. 4cm \ \ \ B. 5cm \ \ \  C. 6cm \ \ \  D. 8cm
     故答案为: A
 \end{answers}
 
+\begin{examplespace}
+    \vspace{1cm}
+\end{examplespace}
 
 
 
@@ -702,6 +725,9 @@ A．4  \hspace{2em}	B．6 \hspace{2em} C．6或8 \hspace{2em} D．4或6
     当点F在点E的右侧时，BC=BE+EF+CF=2AB+EF=10，∴AB=4
 \end{answers}
 
+\begin{examplespace}
+    \vspace{1cm}
+\end{examplespace}
 
 \begin{example}
     如图，在平行四边形ABCD中，P是AD边上一点．已知 $S_{△ABP}=3.5cm^2$，
@@ -736,6 +762,10 @@ A．4  \hspace{2em}	B．6 \hspace{2em} C．6或8 \hspace{2em} D．4或6
 \begin{answers}
     故答案为: 12
 \end{answers}
+
+\begin{examplespace}
+    \vspace{1cm}
+\end{examplespace}
 
 \begin{example}
 如图，平行四边形ABCD的对角线AC，BD相交于点O，EF，GH过点O，且点E，H在边AB上，点G，F在边CD上，则阴影部分的面积与ABCD的面积比值是（　　）．\\
@@ -785,6 +815,10 @@ A．1/2  \hspace{2em}	B． 1/3 \hspace{2em}	C．1/4	\hspace{2em} D．1/5
     阴影部分的面积与▱ABCD的面积比值是1/4．故选：C．
 \end{answers}
 
+
+
+\cleardoublepage
+
 \begin{example}
     如图，在平面直角坐标系中，若平行四边形ABCD的三个顶点的坐标分别是A(-1,0)、B(-2,-3)、
     D(3,2)，则顶点C的坐标是 \uds ．
@@ -811,31 +845,37 @@ A．1/2  \hspace{2em}	B． 1/3 \hspace{2em}	C．1/4	\hspace{2em} D．1/5
     故答案为: (2,-1)．
 \end{answers}   
 
-\cleardoublepage
+
 
 \example{}以三角形的三个顶点作平行四边形，最多可以作（ \ \ ）\\
 A．2个     \ \  B．3个  \ \      C．4个  \ \       D．5个
 
-\begin{answers}
-    答案 B，3个
-\end{answers}
-
-
 % -------
-% 中位线引入
+% 平行四边形存在性问题引入
 % -------   
 \marginnote{
-    【探索】请你尝试利用下图坐标系，画出符合要求的平行四边形，并体会:中位线的证明、求平四对称中心、平四存在性。
+    【探索】请你尝试利用下图坐标系，画出符合要求的平行四边形。【注意】这个问题叫平四
+    存在性问题，是八下其中的常考内容，题目会要求你回答能与已知三点构成平四的第四个点
+    的坐标。
 }
 \begin{marginfigure}
     \includegraphics{1-cordi-pllg.png}
 \end{marginfigure}
 
+\begin{answers}
+    答案 B，3个
+\end{answers}
+
+\begin{examplespace}
+    \vspace{7cm}
+\end{examplespace}
 
 
 
 
-\cleardoublepage
+
+
+
 \subsection{提高：性质相关证明问题}
 
 \begin{example}
@@ -982,8 +1022,9 @@ A．2个     \ \  B．3个  \ \      C．4个  \ \       D．5个
 
 \begin{answers}
     (1)BQ=12-4t(0≤t≤3)或BQ=4t-12(3<t≤12)
-    (2)9/5
-    (3)存在，12/5或4
+    (2)9/5, AP=QH, t=9-4t, t=9/5
+    (3)存在，12/5或4, (1)当AB为边时，AP=BQ, t=12-4t，四边形ABQP是平行四边形，(2)当AB为对角线时，AP=BQ, 
+    ，t=4t-12, 四边形 APBQ 是平四。
 \end{answers}    
 
 
@@ -991,7 +1032,7 @@ A．2个     \ \  B．3个  \ \      C．4个  \ \       D．5个
 
 
 \cleardoublepage
-\section{课堂内容回忆---需上交}
+\section{课堂内容回忆}
 
 \ubi{姓名:} \uds\uds \ \ \ \ \ubi{日期:} \uds\uds
 
@@ -1235,11 +1276,15 @@ D．有两条对角线\\
 
 \begin{answers}
     【答案】C
-【分析】①延长DE交AB于点F，根据平行四边形性质和四边形内角和即可得到∠ADE=∠ABE；②先证明△ADF≌△EBF，得AD=BE，又有AD=BC，可得BE=BC，即可得到△BCE为等腰直角三角形；③过点B作 交DC延长线于点G，证明△BDE≌△BCG，再根据勾股定理及等腰直角三角形的性质，可得DE+AB=√2 BD成立；④过点C作CH⊥AB于 ，根据勾股定理即可证明AC^2=AH^2+CH^2=(AB+√2/2 AE)^2+(AB-√2/2 AE)^2=2AB^2+AE^2，可知结论不成立．
+    【分析】①延长DE交AB于点F，根据平行四边形性质和四边形内角和即可得
+    到∠ADE=∠ABE；②先证明△ADF≌△EBF，得AD=BE，又有AD=BC，可得BE=BC，即可得到
+    △BCE为等腰直角三角形；③过点B作 交DC延长线于点G，证明△BDE≌△BCG，再根据勾
+    股定理及等腰直角三角形的性质，可得DE+AB=√2 BD成立；④过点C作CH⊥AB于 ，根据勾股定
+    理即可证明 $AC^2=AH^2+CH^2=(AB+√2/2 AE)^2+(AB-√2/2 AE)^2=2AB^2+AE^2$，可知结论不成立．
 \end{answers}
 
 \begin{examplespace}
-    \vspace{3cm}
+    \vspace{1cm}
 \end{examplespace}
 
 
