@@ -65,26 +65,7 @@
 \end{marginfigure}
 
 
-\marginnote{
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,361); %set diagram left start at 0, and has height of 361
-    %Straight Lines [id:da439573922876374] 
-    \draw    (87,218) -- (87,247.14) ;
-    %Straight Lines [id:da5676159915309784] 
-    \draw    (87,247.14) -- (105,247.14) ;
-    %Straight Lines [id:da32984765214506484] 
-    \draw    (87,247) -- (87,276.14) ;
-    %Straight Lines [id:da33250566801593395] 
-    \draw    (87,276.14) -- (105,276.14) ;
-    % Text Node
-    \draw (65,200) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {对应点是否在原图上};
-    % Text Node
-    \draw (108,238) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {关于线对称};
-    % Text Node
-    \draw (109,266) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {关于点对称};
-    \end{tikzpicture}
-}
+
 
 
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -131,11 +112,33 @@
 
 
 \clearpage
-\marginnote{TODO: 看图技巧}
-
 
 \example{“翻折” 产生 “轴对称”；“旋转” 产生 “中心对称”！不论轴对称还是中心对称，在数学和物理中都有着广泛的应用，
 比如下面四个函数图像。观察图像，识别抽对称或中心对称。}
+
+\marginnote{
+    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    %uncomment if require: \path (0,361); %set diagram left start at 0, and has height of 361
+    %Straight Lines [id:da439573922876374] 
+    \draw    (87,218) -- (87,247.14) ;
+    %Straight Lines [id:da5676159915309784] 
+    \draw    (87,247.14) -- (105,247.14) ;
+    %Straight Lines [id:da32984765214506484] 
+    \draw    (87,247) -- (87,276.14) ;
+    %Straight Lines [id:da33250566801593395] 
+    \draw    (87,276.14) -- (105,276.14) ;
+    % Text Node
+    \draw (65,200) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {看图技巧：对应点是否在原图上};
+    % Text Node
+    \draw (108,238) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {关于线对称};
+    % Text Node
+    \draw (109,266) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {关于点对称};
+    \end{tikzpicture}
+}
+
+
+
 
 % 4 个函数图像
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -161,13 +164,15 @@
 \draw    (169.29,1322.02) .. controls (191.73,1326.51) and (198.46,1321.27) .. (200.71,1357.18) ;
 \end{tikzpicture}
 
-\vspace{2cm}
+\vspace{1cm}
 
 
 \begin{example}
     图中其中既是轴对称图形又是中心对称图形的是（ \ \ ）
     \includegraphics{1-t-symetry.jpg}
 \end{example}
+
+\marginnote{奇数边正多边形，轴对称；偶数边正多边形，轴对称+中心对称}
 
 \vspace{2cm}
 
@@ -280,6 +285,14 @@
 
 
 \cleardoublepage
+
+\example{}以下坐标系中，我们已经预先设计好了两个点，请分别以 y 轴为对称轴，以 原点 为对称中心，画出
+A对称点A', B对称点B'。
+
+% 绘制对称图
+\includegraphics{1--symmetry-draw.png}
+
+
 \marginnote{
     TODO: 需要重新整理，请进一步思考下面3个问题:
     \begin{itemize}
@@ -299,21 +312,6 @@
         \item 已知对应点，求对称中心（对称轴）。
     \end{itemize}
 }
-
-\example{}以下坐标系中，我们已经预先设计好了两个点，请分别以 y 轴为对称轴，以 原点 为对称中心，画出
-对称点。并且在这个过程中体会: 
-\begin{enumerate}
-    \item 中点坐标公式的运用?
-    \item 平行的判定和性质的运用？
-    \item 每个对应点是如何绘制出的?
-\end{enumerate}
-
-
-% 绘制对称图
-\includegraphics{1--symmetry-draw.png}
-
-
-
 
 
 
