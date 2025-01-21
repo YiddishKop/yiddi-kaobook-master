@@ -1,9 +1,8 @@
 %\setchapterstyle{kao}
 \setchapterpreamble[u]{\margintoc}
-\chapter{第一讲：平行四边形的性质}
+\chapter{第二讲：平四的判定及特殊的平行四变形---矩形}
 %\labch{pingxing}
 
-\section{轴对称与中心对称}
 
 上一节课，我们学习了平行四边形的基本性质，这节课我们学习：
 \begin{itemize}
@@ -15,7 +14,7 @@
 
 
 \section{平行四边形的判定}
-平四的性质即判定，判定即性质！
+\marginnote{平四的性质即判定，判定即性质！}
 
 \begin{example}
 
@@ -40,45 +39,253 @@
 
 \begin{example}
     1．（23-24八年级下·江苏泰州·期中）如图，在四边形ABCD中，对角线AC与BD相交于点O，下列四个选项中不能判定四边形ABCD 是平行四边形的是（  \ \    ）\\
-    A．∠BAD=∠BCD， 	\ \ \ \ \  B．AD//BC，AB=CD\\
+    A．∠BAD=∠BCD 	\ \ \ \ \ \ \  B．AD//BC，AB=CD\\
     C．OA=OC，OB=OD	\ \ \ D．AD//BC，AO=CO\\
-    \includegraphics[width=0.3\textwidth]{2-exp-2.png}
+    \includegraphics[width=0.35\textwidth]{2-exp-2.png}
 \end{example}
 
+\vspace{1cm}
 
 \begin{example}
-    （23-24九年级下·江苏南通·阶段练习）如图，在□ABCD中，E、F为对角线BD上两点，BE=DF．求证：四边形 是平行四边形．\\
-    \includegraphics[width=0.5\textwidth]{2-exp-3.png}
+    （23-24九年级下·江苏南通·阶段练习）
+    \sidenote[提示]{平四的证明问题，经常借助全等三角形}
+    如图，在□ABCD中，E、F为对角线BD上两点，BE=DF．求证：四边形 ABCD 是平行四边形．\\
+    \includegraphics[width=0.4\textwidth]{2-exp-3.png}
 \end{example}
 
+\vspace{1cm}
+
 \begin{answers}
-    \includegraphics[width=0.5\textwidth]{2-exp-3-ans.png}
+    \includegraphics[width=0.4\textwidth]{2-exp-3-ans.png}
 \end{answers}
 
 
 \begin{example}
-    如图，四边形ABCD对角线交于点O，且O为AC中点，AE=CF，DF∥BE，求证：四边形ABCD是平行四边形．\\
-    \includegraphics[width=0.5\textwidth]{2-exp-4.png}
+    如图，四边形ABCD对角线交于点O，且O为AC中点，AE=CF，DF//BE，求证：四边ABCD是平行四边形．\\
+    \\
+    \includegraphics[width=0.3\textwidth]{2-exp-4.png}
 \end{example}
+
+\vspace{1cm}
 
 
 \begin{example}
+	如图，在平行四边形ABCD中，点M、N是对角线AC上的点，且AM=CN，DE=BF，求证：四边形MFNE是平行四边形．
+    \\
+    \includegraphics[width=0.4\textwidth]{2-exp-5.png}
+\end{example}
 
+\begin{answers}
+    ∴∠MAF=∠NCE\\
+    又∵DE=BF\\
+    ∴AF=CE\\
+    又∵AM=CN\\
+    显然ΔAFM≌ΔCEN\\
+    ∴FM=EN且∠AMF=∠CNE\\
+    ∴∠FMN=∠ENM\\
+    ∴四边形MFNE是平行四边形．\\
+\end{answers}
+
+\vspace{1cm}
+
+\begin{example}
+    如图，过四边形ABCD对角线的交点O作直线EF交AD、BC分别于E、F，又G、H分别为OB、OD的中点，求证：四边形EHFG为平行四边形．
+    \\ \\
+    \includegraphics[width=0.4\textwidth]{2-exp-6.png}
+\end{example}
+
+\vspace{1cm}
+
+\begin{example}
+    已知：如图，平行四边形ABCD内有一点E满足ED⊥AD于点D，∠EBC=∠EDC，∠ECB=45°，请找出与BE相等的一条线段，并给予证明．
+    \\ \\
+    \includegraphics[width=0.4\textwidth]{2-exp-7.png}
+\end{example}
+
+\vspace{1cm}
+
+\begin{answers}
+    \includegraphics[width=0.4\textwidth]{2-exp-8.png}
+\end{answers}
+
+\begin{example}
+    如图，在平行四边形ABCD的各边AB，BC，CD，DA上，分别取E，F，G，H，使AE=CG，
+    BF=DH，求证：四边形EFGH为平行四边形
+    \\
+    \includegraphics[width=0.4\textwidth]{2-exp-9.png}
 \end{example}
 
 
-
-\section{菱形}
-
-
-
-
-
+\cleardoublepage
 \section{矩形}
+\begin{marginfigure}
+    \includegraphics{2.2-exp-9.png}
+\end{marginfigure}
+
+\begin{definition}
+    \ubi{矩形的定义}\\
+    有一个角是\ubi{直角}的平行四边形叫做矩形．
+\end{definition}
+
+\begin{theorem}
+    \ubi{矩形的性质}\\
+    矩形是特殊的平行四边形，它具有平行四边形的所有性质，还具有自己独特的性质：
+    \begin{itemize}
+        \item 边的性质：对边平行且相等． 
+        \item 角的性质：四个角都是\ubi{直角}．
+        \item 对角线性质：对角线互相平分且\ubi{相等}．\sidenote[注意]{对角线相等的平行四边形才是矩形，如果只说对角线相等，那还可能是我们的“老朋友”等腰梯形}
+        \item 对称性：矩形是中心对称图形，也是\ubi{轴对称图形}．
+    \end{itemize}
+\end{theorem}
+
+直角三角形斜边上的中线等于斜边的一半．
+直角三角形中，30°角所对的边等于斜边的一半．
+
+\begin{theorem}
+    \ubi{矩形的判定}
+    \begin{itemize}
+        \item 判定1：有一个角是直角的平行四边形是矩形．
+        \item 判定2：对角线相等的平行四边形是矩形．
+        \item 判定3：有三个角是直角的四边形是矩形．
+    \end{itemize}
+\end{theorem}
 
 
+\begin{example}
+    矩形具有而平行四边形不具有的性质为（  \ \   ）\\
+A．对角线相等      \hspace{1.7cm}                 B．对角相等\\
+C．对角线互相平分    \hspace{1cm}                D．对边相等\\
+\end{example}
+
+\begin{answers}
+    A
+\end{answers}
+
+\marginnote{例二在考察\ubi{特殊角}对于矩形的形状的影响。结合矩形天生具有的直角，就可以利用
+勾股定理等手段进行解决}
+\begin{example}
+	如图，矩形ABCD沿AE折叠，使D点落在BC边上的F点处，如果∠BAF=60°，则∠DAE=\uds\\         
+    \includegraphics[width=0.5\textwidth]{2.2-exp-1.png}
+\end{example}
+
+\begin{answers}
+    15°
+\end{answers}
+
+\vspace{1cm}
+
+\marginnote{绘草图的能力是考场上的重要能力之一，务必要训练自己简单快速绘图的能力，尽量不用直尺，太浪费时间。明白
+图形是如何\ubi{“生长”}的，这个过程能帮助你快速了解一遍题意。这对于几何问题尤其重要。}
+\begin{exercise}
+    矩形ABCD中，点H为AD的中点，P为BC上任意一点，PE⊥HC交HC于点E，PF⊥BH交BH于点F，当AB，BC满足 \uds \uds 条件时，四边形PEHF是矩形
+\end{exercise}
 
 
+\begin{example}
+    如图，在四边形ABCD中，∠ABC=∠BCD=90°，AC=BD，求证：四边形ABCD是矩形．\\
+    \includegraphics[width=0.4\textwidth]{2.2-exp-2.png}
+\end{example}
 
 
-\section{正方形}
+\begin{answers}
+    \includegraphics[width=0.5\textwidth]{2.2-exp-2-ans.png}
+\end{answers}
+
+\vspace{1cm}
+
+\begin{exercise}
+    如图，已知在四边形ABCD中，AC⊥DB交于O，E、F、G、H分别是四边的中点，求证四边形EFGH是矩形．\\
+    \includegraphics[width=0.5\textwidth]{2.2-exp-3.png}
+\end{exercise}
+\begin{answers}
+    \includegraphics[width=0.5\textwidth]{2.2-exp-3-ans.png}
+\end{answers}
+\vspace{1cm}
+
+\begin{example}
+    如图，在平行四边形ABCD中，M是AD的中点，且MB=MC，
+求证：四边形ABCD是矩形．\\
+\includegraphics[width=0.4\textwidth]{2.2-exp-4.png}
+\end{example}
+
+\begin{answers}
+    \includegraphics[width=0.4\textwidth]{2.2-exp-4-ans.png}
+\end{answers}
+
+\vspace{1cm}
+
+
+\begin{example}
+    \sidenote{联想平四中的面积相关推论，以及对角线等分面积推论，列出式子！}
+    已知矩形ABCD和点P，当点P在矩形ABCD内时，试求证：$S_{△PBC}=S_{△PAC}+S_{△PCD}$\\
+    \includegraphics[width=0.4\textwidth]{2.2-exp--5.png}
+\end{example}
+
+\begin{answers}
+    \includegraphics[width=0.4\textwidth]{2.2-exp--5-ans.png}
+\end{answers}
+
+\vspace{1cm}
+
+\begin{example}
+    如图，将矩形ABCD沿AC翻折，使点B落在点E处，连接DE、CE，过点E作EH⊥AC，垂足为H．\\
+    ⑴判断ACED是什么图形,并加以证明；\\
+    ⑵若AB=8，AD=6．求DE的长；\\
+    ⑶四边形ACED中，比较AE+EC与AC+EH的大小．\\
+    \includegraphics[width=0.4\textwidth]{2.2-exp-6.png}
+\end{example}
+
+\begin{answers}
+    \includegraphics[width=0.4\textwidth]{2.2-exp-6-ans.png}
+\end{answers}
+
+\vspace{1cm}
+
+
+\cleardoublepage
+\section{课后作业}
+
+
+\begin{exercise}
+    如图，在矩形ABCD中，点E是BC上一点，AE=AD，DF⊥AE，垂足为F.线段DF与图中的哪一条线段相等？先将你猜想出的结论填写在下面的横线上，然后再加以证明。即DF= \uds .(写出一条线段即可)\\
+    \includegraphics[width=0.4\textwidth]{2.2-hw-1.png}
+\end{exercise}
+
+\begin{answers}
+    \includegraphics{2.2-hw-1-ans.png}
+\end{answers}
+
+
+\begin{exercise}
+	如图，矩形ABCD的两条对角线相交于点O，∠AOB=60°，AB=2，则矩形的对角线AC的长是（ \ \ ）\\
+A．2  \ \ \ B．4 \ \ \ C．2√3 \ \ \  D．4√3\\
+\includegraphics[width=0.4\textwidth]{2.2-hw-2.png}
+\end{exercise}
+
+\begin{answers}
+    ∵∠AOB=60°，AO=BO，∴ΔAOB为等边三角形，∴AC=4
+\end{answers}
+
+
+\begin{exercise}
+    如图，矩形ABCD中，对角线AC，BD相交于点O，AE⊥BO于E，OF⊥AD于F，已知
+    OF=3cm，且BE:ED=1:3，求BD的长．\\
+    \includegraphics[width=0.4\textwidth]{2.2-hw-3.png}
+\end{exercise}
+
+\begin{answers}
+    \includegraphics[width=0.4\textwidth]{2.2-hw-3-ans.png}
+\end{answers}
+
+\begin{exercise}
+    如图所示，在Rt⁡Δ ABC中，∠ABC=90°，将Rt⁡Δ ABC绕点C顺时针方向旋转60°得到ΔDEC点E在AC上
+    ，再将Rt⁡Δ ABC沿着AB所在直线翻转180°得到ΔABF连接AD． \\
+⑴ 求证：四边形AFCD是菱形；\\
+⑵ 连接BE并延长交AD于G连接CG，请问：四边形ABCG是什么特殊
+平行四边形？为什么？\\
+\includegraphics[width=0.4\textwidth]{2.2-hw-4.png}
+\end{exercise}
+
+\begin{answers}
+    \includegraphics[width=0.4\textwidth]{2.2-hw-4-ans.png}
+\end{answers}
