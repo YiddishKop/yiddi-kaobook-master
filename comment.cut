@@ -1,1 +1,4 @@
-    \includegraphics[width=0.5\textwidth]{3-2exp-12-ans.png}
+    -3<0，在每个象限内，y随x的增大而增大.
+    又点(-2，a)，(-1，b)在第二象限，-2<-1，=>0<a<b.
+    又点(1，c)在第四象限，=>c<0. =>c<a<b.
+    【答案】c<a<b.
