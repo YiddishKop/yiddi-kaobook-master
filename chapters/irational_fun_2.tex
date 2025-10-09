@@ -1,0 +1,257 @@
+%\setchapterstyle{kao}
+\setchapterpreamble[u]{\margintoc}
+\chapter{第五讲：反比例函数图像的深入探讨}
+%\labch{pingxing}
+
+
+\section{不同 k 值对图像的影响}
+
+\subsection{k 与矩形面积}
+
+当 k 取不同于 8 的值的时候，反比例函数图像会发生什么变化呢？
+
+\fbox{思考过程}
+\begin{itemize}
+    \item 首先，双曲线的本质不会产生变化，依旧是曲线。
+    \item 其次，k 的几何意义是“面积”，所以从面积的角度考虑曲线会产生什么改变。
+\end{itemize}
+
+\marginnote{绘制完成后你发现了什么？加深对 k 的理解对于反比例函数非常重要！}
+\begin{example}
+    请你在同一个坐标系内画出 k=4 和 k=16 的反比例函数图像，并且比较他们之间的差异。(图中已经帮助你绘制好了 k=8 的图像)：\\
+    \includegraphics{4-1-4.png}
+\end{example}
+
+
+
+\cleardoublepage
+\begin{theorem}
+    因为 $y\cdot x=k$ 中的k代表的就是面积，所以表达式对应的
+曲线就是\ubi{面积为k的所有点形成的线}，当面积不同，也就是 k 值不同时，形成的曲线自然不同，
+最直观的表现就是曲线是更“胖”还是更“瘦”
+\sidenote{再进一步，我们还可以用其与原点的距离来进
+一步理解，后面会结合反比例函数的对称性
+展开这部分内容.}。
+\end{theorem}
+
+\vspace{0.5cm}
+
+
+\hspace{1cm} $y=\frac{4}{x}$ \hspace{3cm} $y=\frac{8}{x}$ \hspace{2cm} $y=\frac{16}{x}$\\
+\includegraphics{4-1-6.png}\\
+
+现在我们将 $y=\frac{4}{x}$ 、$y=\frac{8}{x}$、 $y=\frac{16}{x}$ 的图像放在一起，请你标出各自曲线对应的表达式？\\
+
+
+\includegraphics{5-1-1.png}\\
+
+
+了解 k 的几何意义是面积之后，我们很容易可以得到一些好用的结论，这对我们加强对反比例函数的理解非常重要,
+更复杂的结论我们会在后面的专题部分讲解，考虑到大家的接受程度，这里只介绍两个简单结论。
+
+
+\cleardoublepage
+
+\subsection{关于 k 的两个简单结论}
+
+\begin{theorem}
+    双曲线上任一点到坐标轴作垂线，垂线与坐标轴形成的矩形面积为 $|k|$;与原点围成的三角形面积为 $\frac{|k|}{2}$
+    \begin{marginfigure}
+        \includegraphics{5-1-2.png}
+        \includegraphics{5-1-3.png}
+    \end{marginfigure}
+\end{theorem}
+
+\begin{theorem}
+    当 k 值增大时，双曲线会“放开”；当 k 值减小时，双曲线会“缩小”。
+\end{theorem}
+
+
+\begin{example}
+    如图，点P在反比例函数的图像上，过P点作PA⊥x轴于A点，作PB⊥y
+    轴于B点，矩形OAPB的面积为9，则该反比例函数的解析式为$\uds\uds$\\
+    \includegraphics[width=0.3\textwidth]{5-exp-1.png}                
+\end{example}
+
+\begin{answers}
+    $y=\frac{9}{x}$
+\end{answers}
+
+
+\begin{example}
+    反比例函数$y=k/x$的图像如图所示，点M是该函数图像上一点，MN垂直于x轴，垂足是
+    点N，如果$S_{ΔMON}=2$，则k的值为（ \ \ \ ）\\
+    A. 2   \hspace{2cm}     B. -2    \hspace{2cm}    C. 4    \hspace{2cm}       D. -4\\
+    \includegraphics[width=0.3\textwidth]{5-exp-2.png}
+\end{example}
+
+\begin{answers}
+    答案D
+\end{answers}
+
+
+\begin{example}
+    如图，在Rt⁡ΔAOB中，点A是直线$y=x+m$与双曲线$y=m/x$在第一象限的交点，且$S_{ΔAOB}=2$，则m的值是\uds\uds.
+    \includegraphics[width=0.5\textwidth]{5-exp-3.png}
+\end{example}
+
+
+\begin{answers}
+    【答案】已知$S_ΔAOB=2$. 因为 |m|/2=2， 所以 m>0， 所以 m=4.
+\end{answers}
+
+
+\cleardoublepage
+\begin{example}
+    如图，在函数 $y=\frac{2}{x}$ 的图像上任取一点A，过点A作y轴的垂线交
+    函数 $y=-\frac{8}{x}$ 的图像于点B，连接OA，OB，则▲AOB的面积是（ \ \ ）\\
+    A．3 \hspace{2cm}	B．5 \hspace{2cm}	C．6 \hspace{2cm}	D．10\\
+    \includegraphics[width=0.7\textwidth]{5-exp-5.png}
+\end{example}
+
+\begin{answers}
+    答案B
+\end{answers}
+
+\vspace{2cm}
+
+\begin{example}
+    \marginnote{【思考】方程的思想无处不在，涉及到函数问题的时候，主要是通过等量关系去建立方程,
+    而建立方程的前提是设坐标。}
+    已知点(1,3)在函数$y=k/x (x>0)$的图像上，矩形ABCD的边BC在x轴上，E是对角线BD的中点，函
+    数$ y=k/x (x>0)$的图像经过A、E两点，若∠ABD=45°，求E点的坐标.\\
+    \includegraphics[width=0.5\textwidth]{5-exp-4.png}
+\end{example}
+
+\begin{answers}
+    点(1，3)在函数y=k/x的图像上，k=3.\\
+又E也在函数y=k/x的图像上，故设E点的坐标为(m，3/m).\\
+过E点作EF⊥x轴于F，则EF=3/m.\\
+又E是对角线BD的中点，AB=CD=2EF=6/m.\\
+故A点的纵坐标为6/m，代入y=3/x中，得A点坐标为 (m/2，6/m).\\
+因此BF=OF-OB=m-m/2=m/2.由∠ABD=45°，得∠EBF=45°，BF=EF.\\
+即有m/2=3/m.解得m=±√6.而m>0，故m=√6.则E点坐标为 (√6，√6/2).\\
+\end{answers}
+
+
+\cleardoublepage
+\section{反比例函数的对称性与增减性}
+
+\subsection{反比例函数的对称性}
+
+通过八上的轴对称以及八下的中心对称，我们加强了对图形对称性的理解，函数自带图像，所以我们
+也可以通过函数的对称性来加深对函数的理解。
+
+\begin{theorem}
+    反比例函数既是轴对称图形也是中心对称图形，它同时具有两个对称轴和
+    一个对称中心，对于 $y=\frac{k}{x}$ 来说：
+    \begin{itemize}
+        \item 对称轴：y=x 和 y=-x
+        \item 对称中心：原点(0,0)
+    \end{itemize}
+\end{theorem}
+
+\includegraphics[width=0.4\textwidth]{5-1-5.png}
+\includegraphics[width=0.4\textwidth]{5-1-6.png}
+\includegraphics[width=0.4\textwidth]{5-1-7.png}
+
+
+\subsection{反比例函数的增减性}
+\begin{theorem}
+    反比例函数的图像是双曲线，所有具有两个分支，这两个分支保持相同的增减性。
+    \begin{itemize}
+        \item 当 k>0 时，反比例函数是递减的
+        \item 当 k<0 时，反比例函数是递增的
+    \end{itemize}
+\end{theorem}
+
+\includegraphics[width=0.5\textwidth]{5-1-9.png}  \hspace{1cm}
+\includegraphics[width=0.5\textwidth]{5-1-8.png}
+
+\section{反比例函数图像相关练习}
+
+\begin{example}
+    如图是三个反比例函数$y=k_1/x$、$y=k_2/x$、$y=k_3/x$在x轴上方的图象，由此观
+    察得到$k_1$、$k_2$、$k_3$的大小关系为\uds.
+    \includegraphics[width=0.5\textwidth]{5-exp-6.png}
+\end{example}
+
+\begin{answers}
+    $k_1<k_2<k_3$
+\end{answers}
+
+\begin{example}
+    在反比例函数$y=(k-5)/x$图象的每一支曲线上，y都随x的增大而减小，则k的取值范围是 （ \ \  ）\\
+A．k>5      \hspace{1cm}    B．k>0   \hspace{1cm}    C．k<5    \hspace{1cm}      D．k<0
+\end{example}
+
+\begin{answers}
+    【答案】A
+\end{answers}
+
+\vspace{1cm}
+
+\begin{example}
+    已知反比例函数$y=k/x$的图像在第二、第四象限内，函数图像上有两点$A(2√7,y_1)$,$B(5,y_2)$，则$y_1$与$y_2$的大小关系为（ \  \ ）\\
+A.$y_1>y_2$     \hspace{1cm}    B. $y_1=y_2$   \hspace{1cm}     C. $y_1<y_2$   \hspace{1cm}     D. 无法确定
+\end{example}
+
+\begin{answers}
+    由题意可得$A(2√7,y_1 )$,$B(5,y_2 )$均在第四象限内，
+    反比例函数的图像在第二、第四象限内，k<0，
+    在每个象限内，y随x的增大而增大，
+    又2√7>5.所以 $y_1>y_2$.
+    【答案】A.
+    
+    【答案】A
+\end{answers}
+
+
+\vspace{1cm}
+\begin{example}
+    若点A (-1，$y_1$)、B (2，$y_2$)、B (π，$y_3$)都是反比例函数$y=(k^2+1)/x$的图像上，试比较$y_1$、$y_2$、$y_3$的大小关系 \uds\uds\uds.
+\end{example}
+
+\begin{answers}
+    $k^2+1$>0，所以$y=(k^2+1)/x$的函数在一、三象限内，易得$y_2>y_3>y_1$.
+    【答案】$y_2>y_3>y_1$.
+\end{answers}
+
+
+\vspace{1cm}
+\begin{example}
+    已知点$A(x_1,y_1)$，$B(x_2,y_2)$是反比例函数$y=k/x (k>0)$的图象上的两点，若$x_1<0<x_2$，则有( \ \ )．\\
+$A.y_1<0<y_2$	\hspace{0.5cm} $B.y_2<0<y_1$	\hspace{0.5cm} 
+$C.y_1<y_2<0$	\hspace{0.5cm} $D.y_2<y_1<0$
+\end{example}
+
+\begin{answers}
+    【解析】应用反比例函数的增减性，要明确已知点是否在同一支双曲线上
+【答案】A
+\end{answers}
+
+
+\vspace{1cm}
+\begin{example}
+    已知反比例函数$y=(1-2m)/x$的图像上两点A ($x_1$，$y_1$)，B ($x_2$，$y_2$)，
+    当$x_1<0<x_2$时，有$y_1<y_2$，则m的取值范围是\uds\uds.
+\end{example}
+
+\begin{answers}
+    根据题意， 反比例函数y=(1-2m)/x的图像分布在第一、三象限，即1-2m>0.∴m<1/2.
+    【答案】m<1/2.
+\end{answers}
+
+
+\vspace{1cm}
+\begin{example}
+    反比例函数$y=-3/x$的图像上有三点，(-2，a)，(-1，b)，(1，c) ，比较a，b，c大小.
+\end{example}
+
+\begin{answers}
+    -3<0，在每个象限内，y随x的增大而增大.
+    又点(-2，a)，(-1，b)在第二象限，-2<-1，=>0<a<b.
+    又点(1，c)在第四象限，=>c<0. =>c<a<b.
+    【答案】c<a<b.
+\end{answers}
+
