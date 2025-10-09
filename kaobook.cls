@@ -24,36 +24,39 @@
 %	CLASS CONFIGURATION
 %----------------------------------------------------------------------------------------
 
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{kaobook}[2021/08/23 v0.9.8 kaobook]
-\newcommand{\@baseclass}{scrbook} % Base class name
+\NeedsTeXFormat{LaTeX2e}  %指定需要LaTeX2e格式。
 
-% Set the default options
+\ProvidesClass{kaobook}[2021/08/23 v0.9.8 kaobook]% 定义类名称和版本
+\newcommand{\@baseclass}{scrbook}   %设置基础类为 KOMA-Script 的 scrbook 
+
+% 定义类名称和版本 : 传递a4paper、10pt字体、半行段距、以及标题选项给基础类。
 \PassOptionsToClass{a4paper}{\@baseclass}
 \PassOptionsToClass{fontsize=10pt}{\@baseclass}
 \PassOptionsToClass{parskip=half}{\@baseclass}
-\PassOptionsToClass{headings=optiontoheadandtoc}{\@baseclass}
+\PassOptionsToClass{headings=optiontoheadandtoc}{\@baseclass} %标题同时出现在页眉和目录中
 
-% Pass through any other options to the base class
+% 将任何未明确处理的选项传递给基础类。
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{\@baseclass}} 
 
-\ProcessOptions\relax % Process the options
+\ProcessOptions\relax % 处理选项。 Process the options
 
-\LoadClass{\@baseclass} % Load the base class
+\LoadClass{\@baseclass} % 加载 scrbook 类 。 Load the base class
 
-\RequirePackage{kao} % Load the code common to all classes
+\RequirePackage{kao} % 加载kao.sty，这个包可能包含了一些通用设置。 Load the code common to all classes
 
 %----------------------------------------------------------------------------------------
-%	FRONT-, MAIN-, BACK- MATTERS BEHAVIOUR
+%	 重新定义前言、正文、后记和附录的行为 FRONT-, MAIN-, BACK- MATTERS BEHAVIOUR
+%    保存旧的\frontmatter, \mainmatter, \appendix, \backmatter命令，然后重新定义它们。
+%    在重定义的命令中，除了调用旧命令，还设置了页面样式、页面布局和章节样式。
 %----------------------------------------------------------------------------------------
 
 % Front matter
-\let\oldfrontmatter\frontmatter % Store the old command
+\let\oldfrontmatter\frontmatter % 保存原命令，重新定义前言格式 Store the old command
 \renewcommand{\frontmatter}{%
 	\oldfrontmatter% First of all, call the old command
-	\pagestyle{plain.scrheadings}% Use a plain style for the header and the footer
-	\pagelayout{wide}% Use a wide page layout
-	\setchapterstyle{plain} % Choose the default chapter heading style
+	\pagestyle{plain.scrheadings}% 使用简洁的页眉页脚样式 Use a plain style for the header and the footer
+	\pagelayout{wide}% 使用宽页面布局 Use a wide page layout
+	\setchapterstyle{plain} %  设置章节样式为普通样式 Choose the default chapter heading style
 	% \sloppy % Required to better break long lines
 }
 
@@ -63,9 +66,9 @@
 \let\oldmainmatter\mainmatter % Store the old command
 \renewcommand{\mainmatter}{%
 	\oldmainmatter% Call the old command
-	\pagestyle{scrheadings}% Use a fancy style for the header and the footer
-	\pagelayout{margin}% Use a 1.5 column layout
-	\setchapterstyle{kao} % Choose the default chapter heading style
+	\pagestyle{scrheadings}% 使用花式页眉页脚 Use a fancy style for the header and the footer
+	\pagelayout{margin}%  使用边注布局（1.5 栏） Use a 1.5 column layout
+	\setchapterstyle{kao} % 设置章节样式为 kao 样式 Choose the default chapter heading style
 }
 
 %------------------------------------------------
@@ -94,6 +97,14 @@
 %----------------------------------------------------------------------------------------
 
 % Command to easily switch between chapter styles
+% \setchapterstyle 命令允许在四种章节样式（plain, bar, lines, kao）之间切换。
+%----------------------------------------------------------------------------------------
+% \DeclareDocumentCommand 是 xparse 包提供的一个更强大的命令定义接口。语法 \DeclareDocumentCommand{\cmd}{<arg-spec>}{<code>}。
+% 这里 m 表示一个必选参数（#1）。
+% \ifthenelse{\equal{plain}{#1}}{\chapterstyleplain}{}：使用 ifthen 包的条件判断（\equal 用于字符串比较），当参数与 plain 相等时执行 \chapterstyleplain。
+% 依赖提示：要使 \DeclareDocumentCommand 和 \ifthenelse 可用，类或它所 RequirePackage 的文件（例如 kao.sty）
+% 需要加载 xparse（通常通过 expl3 / l3kernel 或 xparse）和 ifthen。若你在调试中发现 Undefined control sequence，请检查 kao.sty 是否加载了这些包。
+%----------------------------------------------------------------------------------------
 \DeclareDocumentCommand{\setchapterstyle}{m}{%
 	\ifthenelse{\equal{plain}{#1}}{\chapterstyleplain}{}
 	\ifthenelse{\equal{bar}{#1}}{\chapterstylebar}{}
@@ -101,7 +112,26 @@
 	\ifthenelse{\equal{kao}{#1}}{\chapterstylekao}{}
 }
 
+%----------------------------------------------------------------------------------------
+% 每种样式通过重新定义\chapterlinesformat和\chapterformat来实现不同的外观。
+% chapterstyleplain: 默认的KOMA样式。
+% chapterstylebar: 在章节标题背后放置一个灰色条。
+% chapterstylelines: 使用线条装饰章节标题。
+% chapterstylekao: 一种自定义样式，根据页面布局（宽版或单列）和奇偶页调整标题布局。
+%----------------------------------------------------------------------------------------
+
 % The default definition in KOMA script
+%----------------------------------------------------------------------------------------
+% \renewcommand{\chapterlinesformat}[3]{...}：\chapterlinesformat 是 KOMA-Script 或模板提供的低层钩子，用来指定章节标题如何排版。它在被调用时会传入 3 个参数（模板中用 ##1/##2/##3 表示，定义时需要写成 ## 来转义 #）。在这里使用 \@hangfrom{##2}{##3}：该内核命令把编号（第二个参数）作为挂起标签，标题文本（第三个参数）靠它对齐。
+% \renewcommand*{\chapterformat}{...}：定制章节编号的输出样式。这里用到的宏：
+% \chapappifchapterprefix：KOMA 提供的条件宏，若启用了 chapter prefix（例如在某些语言或配置下显示“Chapter”一词）则插入它。
+% \nobreakspace：不可断行空格（~ 的命令形式）。
+% \thechapter：当前章节编号。
+% \autodot：KOMA 的自动句点控制（在需要时自动添加句点/点号）。
+% \IfUsePrefixLine：模板可能定义的条件分支，与是否使用“前缀行”有关。
+% \RedeclareSectionCommand[beforeskip=0cm,afterskip=10\vscale]{chapter}：KOMA 的 \RedeclareSectionCommand 用来调整 \chapter 的前后垂直间距。
+% \setlength{\mtocshift}{-1\vscale}：设置 \mtocshift（模板自定义长度）为 -1\vscale，影响目录/章节在布局中的偏移。\vscale 是模板的缩放长度（在 kao.sty / kao 包里定义），与页面大小相关。
+%----------------------------------------------------------------------------------------
 \DeclareDocumentCommand{\chapterstyleplain}{}{%
 	\renewcommand{\chapterlinesformat}[3]{%
 		\@hangfrom{##2}{##3}}
@@ -113,6 +143,17 @@
 }
 
 % Gray bar
+% 灰色背景条的样式
+% 使用 TikZ 创建灰色背景条
+% 调整章节前后的间距
+%----------------------------------------------------------------------------------------
+% 该样式用 tikzpicture 绘制一个覆盖（overlay）节点作为背景灰条，节点内放章节编号与标题（通过 \@hangfrom{##2}{##3}）。
+% remember picture, overlay：overlay 让 tikzpicture 在页面内容上层绘制（不会占用正常垂直空间），remember picture 允许跨页引用页面定位。
+% xshift=\dimexpr - \hoffset - \oddsidemargin - 1in -1mm 与 inner xsep=\dimexpr \hoffset + \oddsidemargin + 1in：这是利用 TeX 的 \dimexpr 做长度计算，把节点的横向起点对齐到页面的真正左边（把 \hoffset, \oddsidemargin 和 1in（TeX 的 reference offset）考虑进去）。这类写法用于让背景条跨越整个页宽（\paperwidth）。
+% fill=gray!20!white：TikZ 的颜色混合语法（20% gray + 80% white）；fill opacity 控制透明度。
+% text width=\paperwidth-40\hscale：把节点内部文本宽度设为几乎整页宽度（减去一定的 \hscale 边距），以便文本自动换行。
+% \RedeclareSectionCommand[beforeskip=-55\vscale,...]{chapter}：使用负 beforeskip 把正文向上挤，留出给灰条显示的空间（否则灰条会重叠正文或产生空白）。
+%----------------------------------------------------------------------------------------
 \DeclareDocumentCommand{\chapterstylebar}{}{%
 	\renewcommand*{\chapterformat}{%
 		\mbox{\chapappifchapterprefix{\nobreakspace}\thechapter%
@@ -139,6 +180,9 @@
 }
 
 % Lines
+% - 线条装饰的样式
+% - 使用 \hrulefill 创建水平线
+% - 章节编号放大显示
 \renewcommand{\hrulefill}[1][0.4pt]{%
 	\leavevmode\leaders\hrule height #1\hfill\kern\z@%
 }
@@ -169,6 +213,11 @@
 }
 
 % The Kao style
+% - 主要的自定义样式
+% - 根据页面布局（宽版/窄版）和奇偶页调整布局
+% - 章节编号放大显示
+% - 在章节标题旁添加垂直线条
+% - 支持双面打印的奇偶页不同布局
 \DeclareDocumentCommand{\chapterstylekao}{}{%
     \IfWideLayout{%
         \renewcommand*{\chapterformat}{%
@@ -232,7 +281,11 @@
 }
 
 % Takes as input the image path and optionally the "beforeskip"
+% 这个命令允许为章节设置背景图片，并自动调整布局。
 \DeclareDocumentCommand{\setchapterimage}{O{55\vscale} m}{%
+    % 设置章节前导图像
+    % 调整章节样式为 bar
+    % 根据图像高度调整间距
 	\setchapterpreamble[o]{%
 		\vspace*{-27\vscale}\hspace*{\dimexpr - \hoffset - \oddsidemargin - 1in}%
 		\includegraphics[width=\paperwidth,height=#1+27\vscale,keepaspectratio=false]{#2}%
@@ -247,16 +300,22 @@
 \chapterstyleplain
 
 %----------------------------------------------------------------------------------------
-%	FONTS AND STYLES
+%	设置字体和样式 FONTS AND STYLES
 %----------------------------------------------------------------------------------------
 
 % Set KOMA fonts for book-specific elements
+% 设置部分、章节、段落等元素的字体
+% - 设置各部分标题的字体样式：
+% - 部分 (part)：正常字体、小型大写、粗体
+% - 章节 (chapter)：正常字体、粗体
+% - 各层级标题都设置为粗体
 \addtokomafont{part}{\normalfont\scshape\bfseries}
 \addtokomafont{partentry}{\normalfont\scshape\bfseries}
 \addtokomafont{chapter}{\normalfont\bfseries}
 \addtokomafont{chapterentry}{\normalfont\bfseries}
 
 % Set KOMA fonts for elements common to all classes
+% 设置部分、章节、段落等元素的字体
 \addtokomafont{section}{\normalfont\bfseries}
 \addtokomafont{subsection}{\normalfont\bfseries}
 \addtokomafont{subsubsection}{\normalfont\bfseries}
@@ -264,7 +323,7 @@
 \setkomafont{descriptionlabel}{\normalfont\bfseries}
 
 %----------------------------------------------------------------------------------------
-%	TOC, LOF & LOT
+%	 设置目录、图表目录和参考文献的选项 TOC, LOF & LOT
 %----------------------------------------------------------------------------------------
 
 % Set default options regarding the table of contents
